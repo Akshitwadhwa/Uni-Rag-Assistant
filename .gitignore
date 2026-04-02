@@ -1,1 +1,15 @@
-.env.example
+.env
+.venv/
+__pycache__/
+*.py[cod]
+.DS_Store
+
+artifacts/
+*.faiss
+*.npy
+*.pkl
+
+.pytest_cache/
+.mypy_cache/
+.coverage
+htmlcov/
