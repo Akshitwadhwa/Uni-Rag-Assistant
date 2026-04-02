@@ -1,0 +1,13 @@
+numpy>=1.26
+pandas>=2.2
+scikit-learn>=1.5
+sentence-transformers>=3.0
+transformers>=4.46
+torch>=2.4
+faiss-cpu>=1.8
+chromadb>=0.5
+pypdf>=5.0
+python-dotenv>=1.0
+openai>=1.54
+requests>=2.32
+tqdm>=4.66
