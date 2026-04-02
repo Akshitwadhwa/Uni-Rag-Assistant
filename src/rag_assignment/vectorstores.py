@@ -16,7 +16,7 @@ class SearchResult:
 
 
 class BaseVectorStore:
-    def add(self, chunks: list[Chunk], embeddings: np.ndarray) -> None:
+    def add(self, chunks: list[Chunk], embeddings: np.ndarray, index_metadata: dict | None = None) -> None:
         raise NotImplementedError
 
     def search(self, query_embedding: np.ndarray, top_k: int = 4) -> list[SearchResult]:
@@ -29,8 +29,9 @@ class FAISSStore(BaseVectorStore):
         self.persist_dir.mkdir(parents=True, exist_ok=True)
         self._chunks: list[Chunk] = []
         self._index = None
+        self._index_metadata: dict = {}
 
-    def add(self, chunks: list[Chunk], embeddings: np.ndarray) -> None:
+    def add(self, chunks: list[Chunk], embeddings: np.ndarray, index_metadata: dict | None = None) -> None:
         try:
             import faiss
         except ImportError as exc:
@@ -40,11 +41,20 @@ class FAISSStore(BaseVectorStore):
         self._index = faiss.IndexFlatIP(vectors.shape[1])
         self._index.add(vectors)
         self._chunks = list(chunks)
+        self._index_metadata = {
+            **(index_metadata or {}),
+            "embedding_dimension": int(vectors.shape[1]),
+            "chunk_count": len(chunks),
+        }
 
         faiss.write_index(self._index, str(self.persist_dir / "index.faiss"))
         np.save(self.persist_dir / "vectors.npy", vectors)
         metadata = [asdict(chunk) for chunk in self._chunks]
         (self.persist_dir / "chunks.json").write_text(json.dumps(metadata, indent=2), encoding="utf-8")
+        (self.persist_dir / "index_metadata.json").write_text(
+            json.dumps(self._index_metadata, indent=2),
+            encoding="utf-8",
+        )
 
     def load(self) -> None:
         try:
@@ -54,18 +64,31 @@ class FAISSStore(BaseVectorStore):
 
         index_path = self.persist_dir / "index.faiss"
         chunk_path = self.persist_dir / "chunks.json"
+        metadata_path = self.persist_dir / "index_metadata.json"
         if not index_path.exists() or not chunk_path.exists():
             raise FileNotFoundError("FAISS index files not found. Run the index command first.")
 
         self._index = faiss.read_index(str(index_path))
         records = json.loads(chunk_path.read_text(encoding="utf-8"))
         self._chunks = [Chunk(**record) for record in records]
+        if metadata_path.exists():
+            self._index_metadata = json.loads(metadata_path.read_text(encoding="utf-8"))
 
     def search(self, query_embedding: np.ndarray, top_k: int = 4) -> list[SearchResult]:
         if self._index is None:
             self.load()
 
         query = np.asarray(query_embedding, dtype="float32").reshape(1, -1)
+        expected_dimension = int(self._index.d)
+        actual_dimension = int(query.shape[1])
+        if actual_dimension != expected_dimension:
+            embedding_model = self._index_metadata.get("embedding_model", "unknown")
+            raise ValueError(
+                "Embedding dimension mismatch for FAISS index. "
+                f"Index expects dimension {expected_dimension}, but query used {actual_dimension}. "
+                f"The saved index was built with embedding model '{embedding_model}'. "
+                "Re-run the index command with the same --embedding-model and --vector-store before asking questions."
+            )
         scores, indices = self._index.search(query, top_k)
         results: list[SearchResult] = []
         for score, idx in zip(scores[0], indices[0], strict=False):
@@ -94,11 +117,18 @@ class ChromaStore(BaseVectorStore):
         self._client = chromadb.PersistentClient(path=str(self.persist_dir))
         self._collection = self._client.get_or_create_collection(name=self.collection_name)
 
-    def add(self, chunks: list[Chunk], embeddings: np.ndarray) -> None:
+    def add(self, chunks: list[Chunk], embeddings: np.ndarray, index_metadata: dict | None = None) -> None:
         self._connect()
         existing = self._collection.get()
         if existing and existing.get("ids"):
             self._collection.delete(ids=existing["ids"])
+        metadata_path = self.persist_dir / "index_metadata.json"
+        index_details = {
+            **(index_metadata or {}),
+            "embedding_dimension": int(np.asarray(embeddings, dtype="float32").shape[1]),
+            "chunk_count": len(chunks),
+        }
+        metadata_path.write_text(json.dumps(index_details, indent=2), encoding="utf-8")
         self._collection.add(
             ids=[chunk.chunk_id for chunk in chunks],
             embeddings=np.asarray(embeddings, dtype="float32").tolist(),

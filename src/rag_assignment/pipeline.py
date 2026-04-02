@@ -24,7 +24,7 @@ class RAGConfig:
     vector_store: str = "faiss"
     generator_backend: str = "ollama"
     generator_model: str = "llama3.1"
-    top_k: int = 
+    top_k: int = 6
     reranker_model: str | None = None
 
 
@@ -53,7 +53,18 @@ class RAGPipeline:
         embeddings = self.embedder.embed_texts([chunk.text for chunk in chunks])
         if isinstance(self.embedder, TfidfEmbedder):
             self.embedder.save()
-        self.vector_store.add(chunks=chunks, embeddings=embeddings)
+        self.vector_store.add(
+            chunks=chunks,
+            embeddings=embeddings,
+            index_metadata={
+                "embedding_backend": self.config.embedding_backend,
+                "embedding_model": self.config.embedding_model,
+                "vector_store": self.config.vector_store,
+                "chunk_strategy": self.config.chunk_strategy,
+                "chunk_size": self.config.chunk_size,
+                "chunk_overlap": self.config.chunk_overlap,
+            },
+        )
         return chunks
 
     def retrieve(self, question: str, top_k: int | None = None) -> list[SearchResult]:
