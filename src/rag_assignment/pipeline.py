@@ -24,7 +24,7 @@ class RAGConfig:
     vector_store: str = "faiss"
     generator_backend: str = "ollama"
     generator_model: str = "llama3.1"
-    top_k: int = 4
+    top_k: int = 
     reranker_model: str | None = None
 
 

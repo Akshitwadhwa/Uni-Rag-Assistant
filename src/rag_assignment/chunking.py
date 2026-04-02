@@ -114,12 +114,59 @@ def build_metadata_prefix(document: Document, section_title: str, section_type: 
     )
 
 
-def section_aware_chunks(document: Document, chunk_size: int, chunk_overlap: int) -> list[tuple[str, dict]]:
+def build_structured_chunks(document: Document) -> list[tuple[str, dict]]:
     chunks: list[tuple[str, dict]] = []
+    common_prefix = build_metadata_prefix(document, "Structured Course Facts", "general")
+    facts_body = (
+        f"Course Title: {document.metadata.get('subject_name', 'unknown')}\n"
+        f"Course Code: {document.metadata.get('course_code', 'unknown')}\n"
+        f"Credits: {document.metadata.get('credits', 'unknown')}\n"
+        f"Faculty: {document.metadata.get('faculty', 'unknown')}\n"
+        f"Semester: {document.metadata.get('semester', 'unknown')}\n"
+        f"Contact Pattern: {document.metadata.get('ltp', 'unknown')}"
+    )
+    chunks.append(
+        (
+            f"{common_prefix}\n{facts_body}".strip(),
+            {"section_title": "Structured Course Facts", "section_type": "general"},
+        )
+    )
+
+    credits = str(document.metadata.get("credits", "unknown"))
+    if credits != "unknown":
+        credits_prefix = build_metadata_prefix(document, "Credits", "credits")
+        credits_body = (
+            f"Course Title: {document.metadata.get('subject_name', 'unknown')}\n"
+            f"Course Code: {document.metadata.get('course_code', 'unknown')}\n"
+            f"Credits: {credits}"
+        )
+        chunks.append(
+            (
+                f"{credits_prefix}\n{credits_body}".strip(),
+                {"section_title": "Credits", "section_type": "credits"},
+            )
+        )
+
+    evaluation_summary = str(document.metadata.get("evaluation_summary", "unknown"))
+    if evaluation_summary != "unknown":
+        eval_prefix = build_metadata_prefix(document, "Evaluation Summary", "evaluation")
+        chunks.append(
+            (
+                f"{eval_prefix}\n{evaluation_summary}".strip(),
+                {"section_title": "Evaluation Summary", "section_type": "evaluation"},
+            )
+        )
+
+    return chunks
+
+
+def section_aware_chunks(document: Document, chunk_size: int, chunk_overlap: int) -> list[tuple[str, dict]]:
+    chunks: list[tuple[str, dict]] = build_structured_chunks(document)
     sections = extract_sections(document.text)
     if not sections:
         fallback_text = build_metadata_prefix(document, "Document Overview", "general") + "\n" + document.text
-        return [(fallback_text, {"section_title": "Document Overview", "section_type": "general"})]
+        chunks.append((fallback_text, {"section_title": "Document Overview", "section_type": "general"}))
+        return chunks
 
     for section_title, section_body in sections:
         section_type = infer_section_type(section_title)

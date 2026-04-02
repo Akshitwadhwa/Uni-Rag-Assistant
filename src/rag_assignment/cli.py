@@ -2,6 +2,9 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
+from datetime import datetime
+from pathlib import Path
 
 from rag_assignment.pipeline import RAGConfig, RAGPipeline
 
@@ -24,6 +27,25 @@ PRESET_CONFIGS = {
         chunk_overlap=80,
     ),
 }
+
+
+OUTPUT_DIR = Path("output")
+
+
+def slugify(value: str, max_length: int = 50) -> str:
+    normalized = re.sub(r"[^a-zA-Z0-9]+", "_", value.strip().lower()).strip("_")
+    if not normalized:
+        normalized = "run"
+    return normalized[:max_length]
+
+
+def write_output_log(command: str, payload: dict, label: str | None = None) -> Path:
+    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    suffix = f"_{slugify(label)}" if label else ""
+    path = OUTPUT_DIR / f"{command}_{timestamp}{suffix}.json"
+    path.write_text(json.dumps(payload, indent=2), encoding="utf-8")
+    return path
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -88,32 +110,52 @@ def run_index(args: argparse.Namespace) -> None:
     config = config_from_args(args)
     pipeline = RAGPipeline(config)
     chunks = pipeline.ingest_and_index()
-    print(json.dumps(
-        {
-            "status": "ok",
-            "documents_dir": config.data_dir,
-            "vector_store": config.vector_store,
-            "embedding_backend": config.embedding_backend,
-            "embedding_model": config.embedding_model,
-            "chunk_count": len(chunks),
-            "chunk_strategy": config.chunk_strategy,
-            "chunk_size": config.chunk_size,
-            "chunk_overlap": config.chunk_overlap,
-        },
-        indent=2,
-    ))
+    payload = {
+        "status": "ok",
+        "documents_dir": config.data_dir,
+        "vector_store": config.vector_store,
+        "embedding_backend": config.embedding_backend,
+        "embedding_model": config.embedding_model,
+        "chunk_count": len(chunks),
+        "chunk_strategy": config.chunk_strategy,
+        "chunk_size": config.chunk_size,
+        "chunk_overlap": config.chunk_overlap,
+    }
+    log_path = write_output_log("index", payload, config.vector_store)
+    print(json.dumps(payload, indent=2))
+    print(f"\nLog saved to: {log_path}")
 
 
 def run_ask(args: argparse.Namespace) -> None:
     config = config_from_args(args)
     pipeline = RAGPipeline(config)
     answer, results = pipeline.answer(args.question)
+    payload = {
+        "question": args.question,
+        "generator_backend": args.generator_backend,
+        "generator_model": args.generator_model,
+        "vector_store": config.vector_store,
+        "embedding_model": config.embedding_model,
+        "answer": answer,
+        "retrieved_chunks": [
+            {
+                "score": round(result.score, 4),
+                "source": result.chunk.metadata.get("filename", result.chunk.source),
+                "subject_name": result.chunk.metadata.get("subject_name", "unknown"),
+                "section_title": result.chunk.metadata.get("section_title", "unknown"),
+                "text": result.chunk.text,
+            }
+            for result in results
+        ],
+    }
+    log_path = write_output_log("ask", payload, args.question)
     print("\nAnswer:\n")
     print(answer)
     print("\nRetrieved chunks:\n")
     for result in results:
         print(f"- score={result.score:.4f} | source={result.chunk.metadata.get('filename', result.chunk.source)}")
         print(f"  text={result.chunk.text[:220]}...")
+    print(f"\nLog saved to: {log_path}")
 
 
 def run_compare(args: argparse.Namespace) -> None:
@@ -138,7 +180,10 @@ def run_compare(args: argparse.Namespace) -> None:
                 ],
             }
         )
+    payload = {"question": args.question, "comparisons": outputs}
+    log_path = write_output_log("compare", payload, args.question)
     print(json.dumps(outputs, indent=2))
+    print(f"\nLog saved to: {log_path}")
 
 
 def run_compare_models(args: argparse.Namespace) -> None:
@@ -165,23 +210,23 @@ def run_compare_models(args: argparse.Namespace) -> None:
             }
         )
 
-    print(json.dumps(
-        {
-            "question": args.question,
-            "generator_backend": args.generator_backend,
-            "retrieved_context": [
-                {
-                    "score": round(result.score, 4),
-                    "subject_name": result.chunk.metadata.get("subject_name", "unknown"),
-                    "section_title": result.chunk.metadata.get("section_title", "unknown"),
-                    "source": result.chunk.metadata.get("filename", result.chunk.source),
-                }
-                for result in results
-            ],
-            "model_outputs": outputs,
-        },
-        indent=2,
-    ))
+    payload = {
+        "question": args.question,
+        "generator_backend": args.generator_backend,
+        "retrieved_context": [
+            {
+                "score": round(result.score, 4),
+                "subject_name": result.chunk.metadata.get("subject_name", "unknown"),
+                "section_title": result.chunk.metadata.get("section_title", "unknown"),
+                "source": result.chunk.metadata.get("filename", result.chunk.source),
+            }
+            for result in results
+        ],
+        "model_outputs": outputs,
+    }
+    log_path = write_output_log("compare_models", payload, args.question)
+    print(json.dumps(payload, indent=2))
+    print(f"\nLog saved to: {log_path}")
 
 
 def main() -> None:
