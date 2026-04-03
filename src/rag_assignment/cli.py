@@ -48,6 +48,18 @@ def write_output_log(command: str, payload: dict, label: str | None = None) -> P
     return path
 
 
+def normalize_model_answer(text: str) -> str:
+    cleaned = text.strip()
+    cleaned = cleaned.replace("\r\n", "\n").replace("\r", "\n")
+    cleaned = re.sub(r"\*\*(.*?)\*\*", r"\1", cleaned)
+    cleaned = re.sub(r"(?im)^\s*(answer|justification|sources)\s*:\s*", "", cleaned)
+    cleaned = re.sub(r"\n{2,}", "\n\n", cleaned)
+    cleaned = re.sub(r"[ \t]+", " ", cleaned)
+    cleaned = cleaned.replace(" \n", "\n")
+    cleaned = re.sub(r"\s+([.,;:!?])", r"\1", cleaned)
+    return cleaned.strip()
+
+
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description="RAG assignment CLI")
     subparsers = parser.add_subparsers(dest="command", required=True)
@@ -130,13 +142,14 @@ def run_ask(args: argparse.Namespace) -> None:
     config = config_from_args(args)
     pipeline = RAGPipeline(config)
     answer, results = pipeline.answer(args.question)
+    normalized_answer = normalize_model_answer(answer)
     payload = {
         "question": args.question,
         "generator_backend": args.generator_backend,
         "generator_model": args.generator_model,
         "vector_store": config.vector_store,
         "embedding_model": config.embedding_model,
-        "answer": answer,
+        "answer": normalized_answer,
         "retrieved_chunks": [
             {
                 "score": round(result.score, 4),
@@ -150,7 +163,7 @@ def run_ask(args: argparse.Namespace) -> None:
     }
     log_path = write_output_log("ask", payload, args.question)
     print("\nAnswer:\n")
-    print(answer)
+    print(normalized_answer)
     print("\nRetrieved chunks:\n")
     for result in results:
         print(f"- score={result.score:.4f} | source={result.chunk.metadata.get('filename', result.chunk.source)}")
@@ -201,7 +214,7 @@ def run_compare_models(args: argparse.Namespace) -> None:
             backend=args.generator_backend,
             model_name=model_name,
         )
-        answer = generator.generate(prompt)
+        answer = normalize_model_answer(generator.generate(prompt))
         outputs.append(
             {
                 "model": model_name,

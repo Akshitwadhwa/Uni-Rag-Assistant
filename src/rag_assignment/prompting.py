@@ -34,8 +34,10 @@ User question:
 {question}
 
 Instructions:
-1. Give a concise answer first.
-2. Then provide a short justification using the retrieved context.
-3. If marks, credits, or percentages are mentioned, preserve the exact values.
-4. End with a "Sources" line listing the filenames.
+1. Write the response in plain English prose, not markdown and not bullet points.
+2. Do not use labels such as "Answer", "Justification", or "Sources".
+3. Start with the direct answer in one sentence.
+4. Then add one or two short sentences explaining which retrieved context supports it.
+5. If marks, credits, or percentages are mentioned, preserve the exact values.
+6. Mention the relevant source filenames naturally in the final sentence.
 """
