@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import re
 from dataclasses import asdict, dataclass
 from pathlib import Path
 
@@ -18,6 +19,13 @@ class SearchResult:
 class BaseVectorStore:
     def add(self, chunks: list[Chunk], embeddings: np.ndarray, index_metadata: dict | None = None) -> None:
         raise NotImplementedError
+
+
+def slugify(value: str, max_length: int = 60) -> str:
+    normalized = re.sub(r"[^a-zA-Z0-9]+", "_", value.strip().lower()).strip("_")
+    if not normalized:
+        normalized = "default"
+    return normalized[:max_length]
 
     def search(self, query_embedding: np.ndarray, top_k: int = 4) -> list[SearchResult]:
         raise NotImplementedError
@@ -104,6 +112,11 @@ class ChromaStore(BaseVectorStore):
         self.collection_name = collection_name
         self._client = None
         self._collection = None
+        self._index_metadata: dict = {}
+
+    @property
+    def metadata_path(self) -> Path:
+        return self.persist_dir / f"{self.collection_name}_index_metadata.json"
 
     def _connect(self) -> None:
         if self._collection is not None:
@@ -116,22 +129,32 @@ class ChromaStore(BaseVectorStore):
         self.persist_dir.mkdir(parents=True, exist_ok=True)
         self._client = chromadb.PersistentClient(path=str(self.persist_dir))
         self._collection = self._client.get_or_create_collection(name=self.collection_name)
+        if self.metadata_path.exists():
+            self._index_metadata = json.loads(self.metadata_path.read_text(encoding="utf-8"))
 
     def add(self, chunks: list[Chunk], embeddings: np.ndarray, index_metadata: dict | None = None) -> None:
         self._connect()
+        vectors = np.asarray(embeddings, dtype="float32")
+        new_dimension = int(vectors.shape[1])
+        existing_dimension = self._index_metadata.get("embedding_dimension")
+        if existing_dimension is not None and int(existing_dimension) != new_dimension:
+            self._client.delete_collection(name=self.collection_name)
+            self._collection = self._client.get_or_create_collection(name=self.collection_name)
+            self._index_metadata = {}
+
         existing = self._collection.get()
         if existing and existing.get("ids"):
             self._collection.delete(ids=existing["ids"])
-        metadata_path = self.persist_dir / "index_metadata.json"
         index_details = {
             **(index_metadata or {}),
-            "embedding_dimension": int(np.asarray(embeddings, dtype="float32").shape[1]),
+            "embedding_dimension": new_dimension,
             "chunk_count": len(chunks),
         }
-        metadata_path.write_text(json.dumps(index_details, indent=2), encoding="utf-8")
+        self._index_metadata = index_details
+        self.metadata_path.write_text(json.dumps(index_details, indent=2), encoding="utf-8")
         self._collection.add(
             ids=[chunk.chunk_id for chunk in chunks],
-            embeddings=np.asarray(embeddings, dtype="float32").tolist(),
+            embeddings=vectors.tolist(),
             documents=[chunk.text for chunk in chunks],
             metadatas=[
                 {
@@ -168,9 +191,12 @@ class ChromaStore(BaseVectorStore):
         return results
 
 
-def create_vector_store(name: str) -> BaseVectorStore:
+def create_vector_store(name: str, namespace: str | None = None) -> BaseVectorStore:
     if name == "faiss":
         return FAISSStore()
     if name == "chroma":
-        return ChromaStore()
+        collection_name = "rag_assignment"
+        if namespace:
+            collection_name = f"rag_assignment_{slugify(namespace)}"
+        return ChromaStore(collection_name=collection_name)
     raise ValueError(f"Unsupported vector store: {name}")

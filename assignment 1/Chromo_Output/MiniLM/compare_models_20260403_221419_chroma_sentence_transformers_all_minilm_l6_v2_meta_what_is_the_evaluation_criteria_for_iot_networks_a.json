@@ -1,0 +1,46 @@
+{
+  "question": "What is the evaluation criteria for IoT Networks,\n  Architectures and Applications?",
+  "generator_backend": "huggingface",
+  "retrieved_context": [
+    {
+      "score": 1.0868,
+      "subject_name": "IoT Networks, Architectures and Applications",
+      "section_title": "Evaluation Summary",
+      "source": " IoT Networks, Architectures and Applications-CSE 2023 Batch.pdf"
+    },
+    {
+      "score": 0.8934,
+      "subject_name": "IoT Networks, Architectures and Applications",
+      "section_title": "Reference Book",
+      "source": " IoT Networks, Architectures and Applications-CSE 2023 Batch.pdf"
+    },
+    {
+      "score": 0.8689,
+      "subject_name": "IoT Networks, Architectures and Applications",
+      "section_title": "Course Coordinator",
+      "source": " IoT Networks, Architectures and Applications-CSE 2023 Batch.pdf"
+    },
+    {
+      "score": 0.8587,
+      "subject_name": "IoT Networks, Architectures and Applications",
+      "section_title": "Topics of the course",
+      "source": " IoT Networks, Architectures and Applications-CSE 2023 Batch.pdf"
+    }
+  ],
+  "model_outputs": [
+    {
+      "model": "meta-llama/Llama-3.1-8B-Instruct",
+      "answer": "The evaluation criteria for IoT Networks, Architectures and Applications is based on the marks/grades obtained in the mid-term and end-term evaluations along with other components as defined in the evaluation plan/table, with a minimum of 40% of marks required to become eligible for grading. This evaluation criteria is supported by the Evaluation Summary section in the IoT Networks, Architectures and Applications-CSE 2023 Batch.pdf handouts, which outlines the relative grading method and the weightage of various evaluation components. The exact evaluation plan is also mentioned in the Assessment Pattern section of the Reference Book section in the same handouts.",
+      "sources": [
+        " IoT Networks, Architectures and Applications-CSE 2023 Batch.pdf"
+      ]
+    },
+    {
+      "model": "openai/gpt-oss-120b",
+      "answer": "The evaluation criteria are a Mid\u2011Term Exam (30\u202f%), Lab Assignments (20\u202f%), a Coursera Certification (10\u202f%) and an End\u2011Term project (demonstration, viva and report) worth 40\u202f%. This breakdown is detailed in the Evaluation Summary and Reference Book sections of the \u201cIoT Networks, Architectures and Applications\u2011CSE 2023 Batch.pdf\u201d handout.",
+      "sources": [
+        " IoT Networks, Architectures and Applications-CSE 2023 Batch.pdf"
+      ]
+    }
+  ]
+}

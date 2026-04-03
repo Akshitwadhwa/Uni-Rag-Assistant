@@ -39,11 +39,12 @@ def slugify(value: str, max_length: int = 50) -> str:
     return normalized[:max_length]
 
 
-def write_output_log(command: str, payload: dict, label: str | None = None) -> Path:
+def write_output_log(command: str, payload: dict, label: str | None = None, variant: str | None = None) -> Path:
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    variant_part = f"_{slugify(variant)}" if variant else ""
     suffix = f"_{slugify(label)}" if label else ""
-    path = OUTPUT_DIR / f"{command}_{timestamp}{suffix}.json"
+    path = OUTPUT_DIR / f"{command}_{timestamp}{variant_part}{suffix}.json"
     path.write_text(json.dumps(payload, indent=2), encoding="utf-8")
     return path
 
@@ -133,7 +134,7 @@ def run_index(args: argparse.Namespace) -> None:
         "chunk_size": config.chunk_size,
         "chunk_overlap": config.chunk_overlap,
     }
-    log_path = write_output_log("index", payload, config.vector_store)
+    log_path = write_output_log("index", payload, label=config.vector_store, variant=config.embedding_model)
     print(json.dumps(payload, indent=2))
     print(f"\nLog saved to: {log_path}")
 
@@ -161,7 +162,7 @@ def run_ask(args: argparse.Namespace) -> None:
             for result in results
         ],
     }
-    log_path = write_output_log("ask", payload, args.question)
+    log_path = write_output_log("ask", payload, label=args.question, variant=f"{config.vector_store}_{config.embedding_model}")
     print("\nAnswer:\n")
     print(normalized_answer)
     print("\nRetrieved chunks:\n")
@@ -194,7 +195,8 @@ def run_compare(args: argparse.Namespace) -> None:
             }
         )
     payload = {"question": args.question, "comparisons": outputs}
-    log_path = write_output_log("compare", payload, args.question)
+    preset_summary = "_".join(args.configs)
+    log_path = write_output_log("compare", payload, label=args.question, variant=preset_summary)
     print(json.dumps(outputs, indent=2))
     print(f"\nLog saved to: {log_path}")
 
@@ -237,7 +239,13 @@ def run_compare_models(args: argparse.Namespace) -> None:
         ],
         "model_outputs": outputs,
     }
-    log_path = write_output_log("compare_models", payload, args.question)
+    model_summary = "_".join(args.generator_models)
+    log_path = write_output_log(
+        "compare_models",
+        payload,
+        label=args.question,
+        variant=f"{config.vector_store}_{config.embedding_model}_{model_summary}",
+    )
     print(json.dumps(payload, indent=2))
     print(f"\nLog saved to: {log_path}")
 

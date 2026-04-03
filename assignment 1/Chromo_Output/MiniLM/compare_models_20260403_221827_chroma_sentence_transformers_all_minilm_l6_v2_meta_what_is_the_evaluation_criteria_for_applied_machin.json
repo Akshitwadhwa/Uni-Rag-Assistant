@@ -1,0 +1,46 @@
+{
+  "question": "What is the evaluation criteria for Applied Machine\n  Learning in Health Care?",
+  "generator_backend": "huggingface",
+  "retrieved_context": [
+    {
+      "score": 1.1727,
+      "subject_name": "Applied Machine Learning in Health Care",
+      "section_title": "Evaluation Summary",
+      "source": "2025_course_handout_AMCH.pdf"
+    },
+    {
+      "score": 0.9072,
+      "subject_name": "Applied Machine Learning in Health Care",
+      "section_title": "Document Overview",
+      "source": "2025_course_handout_AMCH.pdf"
+    },
+    {
+      "score": 0.8885,
+      "subject_name": "Applied Machine Learning in Health Care",
+      "section_title": "CO1 U AP 6",
+      "source": "2025_course_handout_AMCH.pdf"
+    },
+    {
+      "score": 0.8824,
+      "subject_name": "Applied Machine Learning in Health Care",
+      "section_title": "Credits",
+      "source": "2025_course_handout_AMCH.pdf"
+    }
+  ],
+  "model_outputs": [
+    {
+      "model": "meta-llama/Llama-3.1-8B-Instruct",
+      "answer": "The evaluation criteria for Applied Machine Learning in Health Care involves a relative grading method, where the final grade will be based on the marks obtained in various assessment components, including quizzes, assignments, mid-term presentations, and a project, with a weightage of 20%, 20%, 20%, and 40% respectively.\n\nThis evaluation criteria is supported by the assessment table in the Evaluation Summary section of the 2025_course_handout_AMCH.pdf, which outlines the evaluation component weightage and schedule. Additionally, the specific evaluation criteria for each assessment component, such as quizzes, assignments, and presentations, are also outlined in the same section.\n\nThe relative grading method is further supported by the academic regulations of the university, as mentioned in the Evaluation Summary section of the 2025_course_handout_AMCH.pdf.",
+      "sources": [
+        "2025_course_handout_AMCH.pdf"
+      ]
+    },
+    {
+      "model": "openai/gpt-oss-120b",
+      "answer": "The course is assessed through four components \u2013 two quizzes worth a combined 20\u202f% (each quiz 10\u202f%), an assignment worth 20\u202f%, a mid\u2011term presentation worth 20\u202f% and a final project worth 40\u202f%, with each component graded on understanding of concepts, timeliness and problem\u2011solving. This weighting and the detailed rubrics are laid out in the Evaluation Summary of the 2025_course_handout_AMCH.pdf, which also notes that the overall grade follows the university\u2019s relative grading method.",
+      "sources": [
+        "2025_course_handout_AMCH.pdf"
+      ]
+    }
+  ]
+}

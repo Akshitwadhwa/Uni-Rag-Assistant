@@ -35,7 +35,8 @@ class RAGPipeline:
             backend=config.embedding_backend,
             model_name=config.embedding_model,
         )
-        self.vector_store = create_vector_store(config.vector_store)
+        namespace = f"{config.embedding_backend}_{config.embedding_model}_{config.chunk_strategy}"
+        self.vector_store = create_vector_store(config.vector_store, namespace=namespace)
 
     def ingest_and_index(self) -> list[Chunk]:
         documents = load_documents(self.config.data_dir)
