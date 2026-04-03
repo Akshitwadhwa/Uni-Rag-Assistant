@@ -1,0 +1,46 @@
+{
+  "question": "How many quiz are there in machine learning for healthcare?",
+  "generator_backend": "huggingface",
+  "retrieved_context": [
+    {
+      "score": 0.5402,
+      "subject_name": "Applied Machine Learning in Health Care",
+      "section_title": "Credits",
+      "source": "2025_course_handout_AMCH.pdf"
+    },
+    {
+      "score": 0.5234,
+      "subject_name": "Applied Machine Learning in Health Care",
+      "section_title": "CO1 U AP 6",
+      "source": "2025_course_handout_AMCH.pdf"
+    },
+    {
+      "score": 0.5212,
+      "subject_name": "Applied Machine Learning in Health Care",
+      "section_title": "Structured Course Facts",
+      "source": "2025_course_handout_AMCH.pdf"
+    },
+    {
+      "score": 0.5113,
+      "subject_name": "Applied Machine Learning in Health Care",
+      "section_title": "Document Overview",
+      "source": "2025_course_handout_AMCH.pdf"
+    }
+  ],
+  "model_outputs": [
+    {
+      "model": "meta-llama/Llama-3.1-8B-Instruct",
+      "answer": "There is one quiz in the Applied Machine Learning in Health Care course.\nThis quiz is a 20-minute-long closed-book assessment component that carries a weightage of 40% for Understanding of Concepts.\nThe quiz is used to validate students' understanding of epidemiological concepts such as incidence, prevalence, compartmental models, and time-series basics.\nThe relevant information is found in the 2025_course_handout_AMCH.pdf file, specifically in the sections CO1 U AP 6 and Document Overview.",
+      "sources": [
+        "2025_course_handout_AMCH.pdf"
+      ]
+    },
+    {
+      "model": "openai/gpt-oss-120b",
+      "answer": "There is no information in the handouts about how many quizzes are scheduled for the Applied Machine Learning in Health Care course. The retrieved sections describe a quiz as a 20\u2011minute closed\u2011book assessment component but do not state the total number of quizzes. This lack of detail is evident in the documents from the 2025_course_handout_AMCH.pdf file.",
+      "sources": [
+        "2025_course_handout_AMCH.pdf"
+      ]
+    }
+  ]
+}

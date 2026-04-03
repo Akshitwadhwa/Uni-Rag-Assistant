@@ -1,0 +1,46 @@
+{
+  "question": "What topics are covered in IoT Networks, Architectures\n  and Applications?",
+  "generator_backend": "huggingface",
+  "retrieved_context": [
+    {
+      "score": 1.1888,
+      "subject_name": "IoT Networks, Architectures and Applications",
+      "section_title": "Topics of the course",
+      "source": " IoT Networks, Architectures and Applications-CSE 2023 Batch.pdf"
+    },
+    {
+      "score": 0.9447,
+      "subject_name": "IoT Networks, Architectures and Applications",
+      "section_title": "Textbooks",
+      "source": " IoT Networks, Architectures and Applications-CSE 2023 Batch.pdf"
+    },
+    {
+      "score": 0.9243,
+      "subject_name": "IoT Networks, Architectures and Applications",
+      "section_title": "Credits",
+      "source": " IoT Networks, Architectures and Applications-CSE 2023 Batch.pdf"
+    },
+    {
+      "score": 0.9054,
+      "subject_name": "IoT Networks, Architectures and Applications",
+      "section_title": "Course Coordinator",
+      "source": " IoT Networks, Architectures and Applications-CSE 2023 Batch.pdf"
+    }
+  ],
+  "model_outputs": [
+    {
+      "model": "meta-llama/Llama-3.1-8B-Instruct",
+      "answer": "The topics covered in IoT Networks, Architectures and Applications include basics of networking, OSI and TCP/IP models, addressing, and TCP connections; what is IoT and why is IoT; applications of IoT, potential and challenges; IoT network architectures; types of communication, including M2M and machine to cloud.\n\nThese topics are covered in 48 sessions, with a mix of theory and lab sessions, as outlined in the course syllabus, which is supported by the context \"IoT Networks, Architectures and Applications-CSE 2023 Batch.pdf\".",
+      "sources": [
+        " IoT Networks, Architectures and Applications-CSE 2023 Batch.pdf"
+      ]
+    },
+    {
+      "model": "openai/gpt-oss-120b",
+      "answer": "The course covers basics of networking, OSI and TCP/IP models, addressing and TCP connections; an introduction to what IoT is and why it matters; IoT applications together with their potential and challenges; IoT network architectures; and various types of communication such as M2M and machine\u2011to\u2011cloud. These topics are enumerated in the \u201cTopics\u201d section of the IoT Networks, Architectures and Applications handout (IoT Networks, Architectures and Applications\u2011CSE 2023 Batch.pdf).",
+      "sources": [
+        " IoT Networks, Architectures and Applications-CSE 2023 Batch.pdf"
+      ]
+    }
+  ]
+}
