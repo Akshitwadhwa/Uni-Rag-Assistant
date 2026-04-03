@@ -1,0 +1,46 @@
+{
+  "question": "What is the evaluation criteria for Generative AI and LLMs?",
+  "generator_backend": "huggingface",
+  "retrieved_context": [
+    {
+      "score": 1.4449,
+      "subject_name": "Generative AI and LLMs",
+      "section_title": "Evaluation Summary",
+      "source": "Generative AI and LLMs_CourseHandout.pdf"
+    },
+    {
+      "score": 1.1528,
+      "subject_name": "Generative AI and LLMs",
+      "section_title": "following",
+      "source": "Generative AI and LLMs_CourseHandout.pdf"
+    },
+    {
+      "score": 1.1438,
+      "subject_name": "Generative AI and LLMs",
+      "section_title": "22 A im of the Course",
+      "source": "Generative AI and LLMs_CourseHandout.pdf"
+    },
+    {
+      "score": 1.1361,
+      "subject_name": "Generative AI and LLMs",
+      "section_title": "following",
+      "source": "Generative AI and LLMs_CourseHandout.pdf"
+    }
+  ],
+  "model_outputs": [
+    {
+      "model": "meta-llama/Llama-3.1-8B-Instruct",
+      "answer": "**Evaluation Criteria for Generative AI and LLMs:**\n\nThe evaluation criteria for Generative AI and LLMs is based on the relative grading method outlined in the university's academic regulations.\n\n**Justification:**\nThe evaluation criteria is mentioned in the Evaluation Summary section of the course handout, which states that the final grade will be determined by the marks or grades earned during the project's phase-wise evaluations and the end-term assessment. The relative grading method is used to determine the grades.\n\n**Sources:**\nGenerative AI and LLMs_CourseHandout.pdf",
+      "sources": [
+        "Generative AI and LLMs_CourseHandout.pdf"
+      ]
+    },
+    {
+      "model": "openai/gpt-oss-120b",
+      "answer": "**Evaluation criteria**\n\n- **Quiz** \u2013 20\u202f% of the final grade (20 MCQs, 1\u202fmark each, 20\u201130\u202fmin).  \n- **Assignments 1 & 2** \u2013 each 20\u202f% (total 40\u202f%); programming assignments evaluated offline with a demo and viva.  \n- **Comprehensive Project** \u2013 40\u202f%; includes a written report, coding deliverables, presentation, demonstration and viva.  \n\nAll components together account for 100\u202f% of the course grade. A minimum of **40\u202f%** of the total marks is required to be eligible for grading. The course uses the university\u2019s relative grading method, and any AI\u2011generated code or plagiarism is subject to the Unfair Means policy.\n\n**Justification**  \nContext\u202f1 lists the evaluation components, their weightages (Quiz\u202f20\u202f%, Assignments\u202f40\u202f%, Project\u202f40\u202f%), the assessment format (MCQs, programming demos, viva, report, presentation), the minimum 40\u202f% pass requirement, and notes on relative grading and plagiarism policy.\n\n**Sources**  \nGenerative AI and LLMs_CourseHandout.pdf",
+      "sources": [
+        "Generative AI and LLMs_CourseHandout.pdf"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "question": "What is the no of credits  for Theory of Computation?",
+  "generator_backend": "huggingface",
+  "retrieved_context": [
+    {
+      "score": 1.4372,
+      "subject_name": "Theory of Computation",
+      "section_title": "Credits",
+      "source": "Course Handout - ToC (Jan-June).pdf"
+    },
+    {
+      "score": 1.1158,
+      "subject_name": "Theory of Computation",
+      "section_title": "Support for Slow Learners",
+      "source": "Course Handout - ToC (Jan-June).pdf"
+    },
+    {
+      "score": 1.104,
+      "subject_name": "Theory of Computation",
+      "section_title": "3 3 2 3 1 2",
+      "source": "Course Handout - ToC (Jan-June).pdf"
+    },
+    {
+      "score": 1.1021,
+      "subject_name": "Theory of Computation",
+      "section_title": "3 2 1 1 2",
+      "source": "Course Handout - ToC (Jan-June).pdf"
+    }
+  ],
+  "model_outputs": [
+    {
+      "model": "meta-llama/Llama-3.1-8B-Instruct",
+      "answer": "The number of credits for Theory of Computation is 3. This information is supported by multiple contexts, including the course title and credits section in Context 1 and the repeated mention of 3 credits in Contexts 2, 3, and 4. The course handouts from ToC (Jan-June).pdf support this information.",
+      "sources": [
+        "Course Handout - ToC (Jan-June).pdf"
+      ]
+    },
+    {
+      "model": "openai/gpt-oss-120b",
+      "answer": "The Theory of Computation course carries three credits. This information is listed in the credits section of the Course Handout \u2013 ToC (Jan\u2011June).pdf, where the course code CSE2721 is shown with a credit value of 3.",
+      "sources": [
+        "Course Handout - ToC (Jan-June).pdf"
+      ]
+    }
+  ]
+}

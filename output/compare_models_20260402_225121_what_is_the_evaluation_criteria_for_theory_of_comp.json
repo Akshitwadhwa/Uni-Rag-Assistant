@@ -1,0 +1,46 @@
+{
+  "question": "What is the evaluation criteria for Theory of Computation?",
+  "generator_backend": "huggingface",
+  "retrieved_context": [
+    {
+      "score": 1.3614,
+      "subject_name": "Theory of Computation",
+      "section_title": "Evaluation Summary",
+      "source": "Course Handout - ToC (Jan-June).pdf"
+    },
+    {
+      "score": 1.0844,
+      "subject_name": "Theory of Computation",
+      "section_title": "Textbooks",
+      "source": "Course Handout - ToC (Jan-June).pdf"
+    },
+    {
+      "score": 1.0772,
+      "subject_name": "Theory of Computation",
+      "section_title": "Structured Course Facts",
+      "source": "Course Handout - ToC (Jan-June).pdf"
+    },
+    {
+      "score": 1.0648,
+      "subject_name": "Theory of Computation",
+      "section_title": "Course Coordinator: Name",
+      "source": "Course Handout - ToC (Jan-June).pdf"
+    }
+  ],
+  "model_outputs": [
+    {
+      "model": "meta-llama/Llama-3.1-8B-Instruct",
+      "answer": "**Evaluation Criteria for Theory of Computation:**\n\nThe evaluation criteria for Theory of Computation is based on the marks/grades obtained in the Mid-semester exam along with other assessments defined in the assessment table.\n\n**Concise Answer:**\n\nThe evaluation criteria includes:\n- Mid Semester Examination (30%)\n- Quiz 1 & 2 (30%)\n- End Term Presentation (40%)\n\n**Justification:**\n\nAccording to the Evaluation Summary section of the course handout, the final grade will be based on the marks/grades obtained in the Mid-semester exam along with other assessments defined in the assessment table. The evaluation component weightage is as follows:\n- Mid Semester Examination (30%)\n- Quiz 1 & 2 (30%)\n- End Term Presentation (40%)\n\n**Sources:**\n- Course Handout - ToC (Jan-June).pdf",
+      "sources": [
+        "Course Handout - ToC (Jan-June).pdf"
+      ]
+    },
+    {
+      "model": "openai/gpt-oss-120b",
+      "answer": "**Evaluation criteria for Theory of Computation (CSE2721)**  \n\n| Component | Weightage | Timing / Remarks | CO Mapping |\n|-----------|-----------|------------------|------------|\n| Quiz\u202f1 &\u202f2 (online MCQ, closed\u2011book) | 2\u202f\u00d7\u202f15\u202f% = **30\u202f%** | 1st/2nd week of March and 2nd/3rd week of April | CO1,\u202fCO2,\u202fCO3 |\n| Mid\u2011Semester Examination (written, closed\u2011book) | **30\u202f%** | As per university calendar | CO1,\u202fCO2 |\n| End\u2011Term Presentation (take\u2011home assignment, presentation & viva) | **20\u202f%\u202f+\u202f10\u202f%\u202f+\u202f10\u202f% = 40\u202f%** | After Mid\u2011Semester | CO1,\u202fCO2,\u202fCO3 |\n\nThe overall grade is the sum of these three components (30\u202f%\u202f+\u202f30\u202f%\u202f+\u202f40\u202f%\u202f=\u202f100\u202f%). A relative grading method per university regulations is applied.\n\n**Justification** \u2013 The Evaluation Summary section lists the three assessment items, their weightages, timelines, and the course outcomes they address (CO1\u2011CO3)\u3010Context\u202f1\u3011. The same table appears in the Assessment Pattern portion of the Textbooks section\u3010Context\u202f2\u3011.\n\n**Sources**  \n- Course Handout - ToC (Jan-June).pdf (Evaluation Summary, Textbooks sections)",
+      "sources": [
+        "Course Handout - ToC (Jan-June).pdf"
+      ]
+    }
+  ]
+}
