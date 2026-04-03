@@ -1,10 +1,10 @@
 {
-  "question": "What is the evaluation criteria for Generative AI and LLMs?",
+  "question": "What is the evaluation criteria for Generative AI and\n  LLMs?",
   "generator_backend": "huggingface",
   "generator_model": "meta-llama/Llama-3.1-8B-Instruct",
   "vector_store": "faiss",
   "embedding_model": "BAAI/bge-base-en-v1.5",
-  "answer": "**Evaluation Criteria for Generative AI and LLMs:**\n\nThe evaluation criteria for Generative AI and LLMs is based on the work presented by the students as well as the questions asked, or the problems given to code.\n\n**Justification:**\nAccording to the course handout, \"All evaluations will be based on the work presented by the students as well as the questions asked, or the problems given to code.\" (Context 5)\n\n**Sources:**\nGenerative AI and LLMs_CourseHandout.pdf",
+  "answer": "The evaluation criteria for Generative AI and LLMs involves a relative grading method, where the final grade is determined by the marks or grades earned during the project's phase-wise evaluations and the end-term assessment. This grading method is outlined in the university's academic regulations, and students must achieve a minimum of 40% of the total marks upon completing all assessments to be eligible for grading. The course includes two programming assignments, each carrying 20% weightage, and a comprehensive project report that carries a 40% weightage, with an expected effort of 20+ hours. The project will be evaluated separately, and all evaluations will be based on the work presented by the students as well as the questions asked, or the problems given to code. The course emphasizes hands-on, application-driven learning, with 80% of the overall course assessment dedicated to experiential learning. This evaluation criteria is supported by the Evaluation Summary and below sections of the Generative AI and LLMs_CourseHandout.pdf.",
   "retrieved_chunks": [
     {
       "score": 1.4449,

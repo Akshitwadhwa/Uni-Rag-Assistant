@@ -1,0 +1,45 @@
+{
+  "question": "What is the evaluation criteria for Generative AI and\n  LLMs?",
+  "generator_backend": "huggingface",
+  "generator_model": "meta-llama/Llama-3.1-8B-Instruct",
+  "vector_store": "faiss",
+  "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "answer": "The evaluation criteria for Generative AI and LLMs is determined by the marks or grades earned during the project's phase-wise evaluations and the end-term assessment, with a minimum of 40% of the total marks required to be eligible for grading. This is conducted using the relative grading method outlined in the university's academic regulations. The final grade will be determined by the marks or grades earned during the project's phase-wise evaluations and the end-term assessment, as outlined in the table. The relative grading method is used to determine the final grade, as mentioned in the university's academic regulations.",
+  "retrieved_chunks": [
+    {
+      "score": 0.971,
+      "source": "Generative AI and LLMs_CourseHandout.pdf",
+      "subject_name": "Generative AI and LLMs",
+      "section_title": "edition",
+      "text": "Course: Generative AI and LLMs\nCourse Code: CSE3720\nCredits: 3 (3-0-0)\nSection: edition\nSection Type: general\n\nJune\n\n6,"
+    },
+    {
+      "score": 0.9635,
+      "source": "Generative AI and LLMs_CourseHandout.pdf",
+      "subject_name": "Generative AI and LLMs",
+      "section_title": "edition",
+      "text": "Course: Generative AI and LLMs\nCourse Code: CSE3720\nCredits: 3 (3-0-0)\nSection: edition\nSection Type: general\n\nDecember\n\n22,"
+    },
+    {
+      "score": 0.9377,
+      "source": "Generative AI and LLMs_CourseHandout.pdf",
+      "subject_name": "Generative AI and LLMs",
+      "section_title": "22 A im of the Course",
+      "text": "Course: Generative AI and LLMs\nCourse Code: CSE3720\nCredits: 3 (3-0-0)\nSection: 22 A im of the Course\nSection Type: general\n\nSemester Duration: 19\nth\n\nJan,2026 to 8\nth\n\nMay 2026 Course Coordinator: Name: Dr. Soharab Hossain Shaikh Email: soharab.hossain@bmu.edu.in Mobile: 83760 27586 Office: E2 Building, 4\nth\n\nFloor, Cabin No. 81\nThe aim of this course is to provide learners with a structured and practical understanding of\ngenerative\n\nAI\n\nand\n\nlarge\n\nlanguage\n\nmodels\n\n(LLMs).\n\nIt\n\nbegins\n\nwith\n\ncore\n\nfoundational\n\ngenerative\n\nmodeling\n\nconcepts,\n\nincluding\n\nsequence-to-sequence\n\nmodels,\n\nvariational\n\nautoencoders,\n\nand\n\ngenerative\n\nadversarial\n\nnetworks,\n\nand\n\ngradually\n\nprogresses\n\ntoward\n\ntransformer-based\n\narchitectures\n\nthat\n\nunderpin\n\nmodern\n\nlarge\n\nlanguage\n\nmodels.\n\nBuilding\n\non\n\nthis\n\nprogression,\n\nthe\n\ncourse\n\nintroduces\n\nadvanced\n\ntopics\n\nsuch\n\nas\n\nprompt\n\nengineering,\n\nfine-tuning\n\nand\n\nparameter-efficient\n\nadaptation\n\ntechniques,\n\nretrieval-augmented\n\ngeneration,\n\nand\n\ntool\n\nenabled LLM workflows. The course aims to equip students with a strong theoretical foundation and practical skills to design,\nadapt,\n\ndeploy,\n\nfine-tune,\n\nand\n\nevaluate\n\ngenerative\n\nAI\n\nand\n\nLLM-based\n\nsolutions\n\nfor\n\nreal-world\n\napplications.\n\nEthical\n\nconsiderations,\n\ndata\n\nprivacy,\n\nand\n\nresponsible\n\nAI\n\npractices\n\nare\n\nintegral\n\ncomponents\n\nof\n\nthe\n\ncourse,\n\nensuring\n\nthat\n\nstudents\n\ndevelop\n\nsafe,\n\naccountable,\n\nand\n\neffective\n\ngenerative\n\nAI\n\nsystems\n\nsuitable\n\nfor\n\nreal\n\nworld deployment.\nCourse Overview and Context: This course offers a comprehensive journey through generative AI and LLMs, combining theoretical\nknowledge\n\nwith\n\nextensive\n\nlab-based\n\npractice.\n\nThe\n\ncourse\n\ncovers\n\nkey\n\ngenerative\n\nmodels,\n\nincluding\n\nsequence-to-sequence\n\narchitectures,\n\nvariational\n\nautoencoders,\n\nand\n\ngenerative\n\nadversarial\n\nnetworks,\n\nbefore\n\nprogressing\n\nto\n\ntransformer-based\n\nmodels\n\nand\n\nlarge\n\nlanguage\n\nmodels.\n\nStudents\n\nlearn\n\npractical\n\ntechniques\n\nfor\n\nworking\n\nwith\n\nLLMs,\n\nsuch\n\nas\n\nprompt\n\nengineering,\n\nparameter-efficient\n\nfine-tuning,\n\nretrieval-augmented\n\ngeneration,\n\nand\n\ntool-enabled\n\nworkflows\n\nusing\n\nframeworks\n\nlike\n\nLangChain.\n\nThe\n\ncurriculum\n\nalso\n\naddresses\n\ndata\n\nprivacy,\n\nlocal\n\ndeployment\n\nconsiderations,\n\nmodel\n\nevaluation\n\nchallenges,\n\nand\n\nethical\n\nissues\n\nrelated\n\nto\n\nbias,\n\nmisinformation,\n\nand\n\nresponsible\n\nuse.\n\nWith\n\na\n\nstrong\n\nemphasis\n\non\n\napplied\n\nlearning,\n\nthe\n\ncourse\n\nprepares\n\nstudents\n\nfor\n\nindustry\n\nroles\n\nand\n\nresearch\n\npathways\n\nin\n\ngenerative\n\nAI\n\nand\n\nLLM-based\n\nsystems.\n\nCourse Outcomes (CO): At the end of the course the students should be able to do the"
+    },
+    {
+      "score": 0.9371,
+      "source": "Generative AI and LLMs_CourseHandout.pdf",
+      "subject_name": "Generative AI and LLMs",
+      "section_title": "Video lectures/ MOOC",
+      "text": "Course: Generative AI and LLMs\nCourse Code: CSE3720\nCredits: 3 (3-0-0)\nSection: Video lectures/ MOOC\nSection Type: general\n\nReference Links: 1\n.\n\nhttps://www.coursera.org/learn/generative-ai-llm-architecture-data-preparation\n\nA ssessment Pattern: The final grade will be determined by the marks or grades earned during the\nproject\u2019s\n\nphase-wise\n\nevaluations\n\nand\n\nthe\n\nend-term\n\nassessment.\n\nGrading\n\nwill\n\nbe\n\nconducted\n\nusing\n\nthe\n\nrelative\n\ngrading\n\nmethod\n\noutlined\n\nin\n\nthe\n\nuniversity\u2019s\n\nacademic\n\nregulations.\n\nTo\n\nbe\n\neligible\n\nfor\n\ngrading,\n\nstudents\n\nmust\n\nachieve\n\na\n\nminimum\n\nof\n\n40%\n\nof\n\nthe\n\ntotal\n\nmarks\n\nupon\n\ncompleting\n\nall\n\nassessments\n\nlisted\n\nin\n\nthe\n\ntable"
+    },
+    {
+      "score": 0.9306,
+      "source": "Generative AI and LLMs_CourseHandout.pdf",
+      "subject_name": "Generative AI and LLMs",
+      "section_title": "CO/PO",
+      "text": "Course: Generative AI and LLMs\nCourse Code: CSE3720\nCredits: 3 (3-0-0)\nSection: CO/PO\nSection Type: general\n\nMapping"
+    }
+  ]
+}

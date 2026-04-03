@@ -1,0 +1,45 @@
+{
+  "question": "what will be taught in week 1-3 of Cryptography?",
+  "generator_backend": "huggingface",
+  "generator_model": "meta-llama/Llama-3.1-8B-Instruct",
+  "vector_store": "faiss",
+  "embedding_model": "BAAI/bge-base-en-v1.5",
+  "answer": "In weeks 1-3 of the Cryptography course, students will be taught the basics of cryptography, including cryptography and basic terminologies, security goals, security threats and vulnerabilities, security services, and security mechanisms. This is supported by the course syllabus, which lists \"Basic of Cryptography\" as a topic for 3 sessions. The specific topics to be covered include cryptography and basic terminologies, security goals, security threats and vulnerabilities, security services, and security mechanisms. The course syllabus is detailed in the \"Topics of the course\" section of the Cryptography_CSE3703.pdf handout.",
+  "retrieved_chunks": [
+    {
+      "score": 1.0697,
+      "source": "Cryptography_CSE3703.pdf",
+      "subject_name": "Cryptography",
+      "section_title": "CO/PO Mapping",
+      "text": "Course: Cryptography\nCourse Code: CSE3703\nCredits: 3 (3-0-0)\nSection: CO/PO Mapping\nSection Type: general\n\nCO/PO Mapping"
+    },
+    {
+      "score": 1.0681,
+      "source": "Cryptography_CSE3703.pdf",
+      "subject_name": "Cryptography",
+      "section_title": "Topics of the course",
+      "text": "Course: Cryptography\nCourse Code: CSE3703\nCredits: 3 (3-0-0)\nSection: Topics of the course\nSection Type: syllabus\n\nTopics Number of Sessions Course ( 48) Outcomes\nNumber Theory and Finite Fields Modular arithmetic, Euclidian 7 CO1 Algorithm, Primality Testing, Fermat\u2019s and Euler\u2019s theorem, Chinese Reminder theorem, Discrete Logarithms, Finite Fields.\nBasic of Cryptography 3 CO2 Cryptography and basic terminologies, Security goals, Security Threats and Vulnerabilities, Security Services, Security Mechanisms\nClassical Encryption Techniques, Symmetric Encryption- Basic 7 CO2 Theory of Enciphering, Stream Cipher, Block Encryption Algorithms: DES, AES, Block Cipher Modes of operation.\nAsymmetric key cryptographic techniques: principles \u2013 RSA \u2013 7 CO2 ElGamal - Elliptic Curve cryptography \u2013 Key distribution and Key exchange protocols\nMessage Authentication Code (MAC), Hash functions, Secure 7 CO3 Hash Algorithm: SHA-1, MD5, Keyed-Hash Message Authentication Code (HMAC).\nDigital Signature 6 CO3 Digital Signature Standard, Digital Signature Algorithm, RSA Digital Signature, Elliptic Curve Digital Signature algorithm.\nUser Authentication Mechanisms 5 CO3 Authentication Fundamentals, Passwords, Authentication Tokens, Certificate-Based Authentication, Biometric Authentication, Kerberos\nHistorical Cryptanalysis, Cryptanalysis of block ciphers, Brute 6 CO4 force attack, Standard ASCII attack, Man in the middle attack, Cryptanalysis of hash functions."
+    },
+    {
+      "score": 1.0631,
+      "source": "Cryptography_CSE3703.pdf",
+      "subject_name": "Cryptography",
+      "section_title": "Credits",
+      "text": "Course: Cryptography\nCourse Code: CSE3703\nCredits: 3 (3-0-0)\nSection: Credits\nSection Type: credits\n\nCourse Title: Cryptography\nCourse Code: CSE3703\nCredits: 3 (3-0-0)"
+    },
+    {
+      "score": 1.0619,
+      "source": "Cryptography_CSE3703.pdf",
+      "subject_name": "Cryptography",
+      "section_title": "Assessment Pattern",
+      "text": "Course: Cryptography\nCourse Code: CSE3703\nCredits: 3 (3-0-0)\nSection: Assessment Pattern\nSection Type: evaluation\n\nThe final grade will be based on the marks / grades obtained in the mid-semester and end-semester evaluation along\nwith\n\nother\n\nassessments\n\ndefined\n\nbelow.\n\nRelative\n\ngrading\n\nmethod\n\ndefined\n\nin\n\nthe\n\nacademic\n\nregulations\n\nof\n\nthe\n\nuniversity\n\nwill\n\nbe\n\nfollowed\n\nto\n\ngrade\n\nthe\n\nstudents.\n\nStudent\n\nhas\n\nto\n\nsecure\n\nminimum\n\n40%\n\nof\n\nmarks\n\nafter\n\ncompleting\n\nall\n\nthe\n\nassessments\n\nin\n\nthe\n\nfollowing\n\ntable\n\nto\n\nbecome\n\neligible\n\nfor\n\ngrading.\n\nEvaluation Component\nWeightage (%)\nEvaluation Schedule/Timeline\nRubrics/Remarks CO mapping\nAssignment 20% March 1st week Conceptual clarity, correctness of cryptographic methods, quality of explanation, originality, and timely submission will be evaluated.\nCO1, CO2\nMid Semester Examination\n20% As per academic calendar\nEvaluation will focus on conceptual understanding, analytical ability, and p roblem-solving skills based on covered syllabus.\nCO1, CO2, CO3\nQuiz 20% April 1st week MCQ-based assessment to test understanding of key concepts, algorithms, and terminologies discussed in class.\nCO2, CO3\nEnd Term Evaluation\n40% As per academic calendar/Date sheet\nComprehensive assessment of theoretical knowledge, analytical depth, and ability to evaluate cryptographic techniques across the entire syllabus.\nCO1, CO2, CO3, CO4"
+    },
+    {
+      "score": 1.0605,
+      "source": "Cryptography_CSE3703.pdf",
+      "subject_name": "Cryptography",
+      "section_title": "Evaluation Summary",
+      "text": "Course: Cryptography\nCourse Code: CSE3703\nCredits: 3 (3-0-0)\nSection: Evaluation Summary\nSection Type: evaluation\n\nThe final grade will be based on the marks / grades obtained in the mid-semester and end-semester evaluation along with other assessments defined below. Relative grading method defined in the academic regulations of the university will be followed to grade the students. Student has to secure minimum 40% of marks after completing all the assessments in the following table to become eligible for grading. Evaluation Component Weightage (%) Evaluation Schedule/Timeline Rubrics/Remarks CO mapping Assignment 20% March 1st week Conceptual clarity, correctness of cryptographic methods, quality of explanation, originality, and timely submission will be evaluated. CO1, CO2 Mid Semester Examination 20% As per academic calendar Evaluation will focus on conceptual understanding, analytical ability, and problem-solving skills based on covered syllabus. CO1, CO2, CO3 Quiz 20% April 1st week MCQ-based assessment to test understanding of key concepts, algorithms, and terminologies discussed in class. CO2, CO3 End Term Evaluation 40% As per academic calendar/Date sheet Comprehensive assessment of theoretical knowledge, analytical depth, and ability to evaluate cryptographic techniques across the entire syllabus. CO1, CO2, CO3, CO4"
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "question": "What are the no of credits in Toc?",
+  "generator_backend": "huggingface",
+  "generator_model": "meta-llama/Llama-3.1-8B-Instruct",
+  "vector_store": "faiss",
+  "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "answer": "The number of credits in the Theory of Computation course is 3.\nThis information is supported by Context 3 and Context 5, both of which mention the course credits as 3.\nThe course details are available in the Course Handout - ToC (Jan-June) document.",
+  "retrieved_chunks": [
+    {
+      "score": 0.7374,
+      "source": "Cryptography_CSE3703.pdf",
+      "subject_name": "Cryptography",
+      "section_title": "Credits",
+      "text": "Course: Cryptography\nCourse Code: CSE3703\nCredits: 3 (3-0-0)\nSection: Credits\nSection Type: credits\n\nCourse Title: Cryptography\nCourse Code: CSE3703\nCredits: 3 (3-0-0)"
+    },
+    {
+      "score": 0.7064,
+      "source": "Generative AI and LLMs_CourseHandout.pdf",
+      "subject_name": "Generative AI and LLMs",
+      "section_title": "Credits",
+      "text": "Course: Generative AI and LLMs\nCourse Code: CSE3720\nCredits: 3 (3-0-0)\nSection: Credits\nSection Type: credits\n\nCourse Title: Generative AI and LLMs\nCourse Code: CSE3720\nCredits: 3 (3-0-0)"
+    },
+    {
+      "score": 0.6613,
+      "source": "Course Handout - ToC (Jan-June).pdf",
+      "subject_name": "Theory of Computation",
+      "section_title": "Credits",
+      "text": "Course: Theory of Computation\nCourse Code: CSE2721\nCredits: 3\nSection: Credits\nSection Type: credits\n\nCourse Title: Theory of Computation\nCourse Code: CSE2721\nCredits: 3"
+    },
+    {
+      "score": 0.6457,
+      "source": " IoT Networks, Architectures and Applications-CSE 2023 Batch.pdf",
+      "subject_name": "IoT Networks, Architectures and Applications",
+      "section_title": "Credits",
+      "text": "Course: IoT Networks, Architectures and Applications\nCourse Code: CSE3722\nCredits: 03 (L-D-P: 3-0-0)\nSection: Credits\nSection Type: credits\n\nCourse Title: IoT Networks, Architectures and Applications\nCourse Code: CSE3722\nCredits: 03 (L-D-P: 3-0-0)"
+    },
+    {
+      "score": 0.3927,
+      "source": "Course Handout - ToC (Jan-June).pdf",
+      "subject_name": "Theory of Computation",
+      "section_title": "Document Overview",
+      "text": "Course: Theory of Computation\nCourse Code: CSE2721\nCredits: 3\nSection: Document Overview\nSection Type: general\n\nCourse Code: CSE2721 Course Name: Theory of Computation\n\nL-D-P: 2 -1-0 (3 Credits) / 16 weeks\nContact hours per week: 3 hours\nBatch: 2023, 5th Sem Academic Year: 2025-2026\nSemester Duration: 19 Jan 2026- 8 May 2026\n\nCourse Faculties and Emails: Dr. Meenakshi Malik meenakshi.malik@bmu.edu.in Room no: 63 Contact: 9205254330 Dr. Satyendr Singh satyendr.singh@bmu.edu.in Room no: 80 Contact: 8683856238 Dr. Anusha Chhabra anusha.chhabra@bmu.edu.in Room no: Opposite to cabin no 61 Contact: 9717385202 Dr. Isha Ganguli isha.ganguli@bmu.edu.in Room no: 87 Contact: 8481835187"
+    }
+  ]
+}
