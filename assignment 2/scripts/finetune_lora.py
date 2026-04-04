@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import argparse
+import inspect
 import json
 import math
 import random
@@ -201,39 +202,51 @@ def main() -> None:
         system_prompt=args.system_prompt,
     )
 
-    training_args = TrainingArguments(
-        output_dir=str(output_dir),
-        learning_rate=args.learning_rate,
-        num_train_epochs=args.num_train_epochs,
-        per_device_train_batch_size=args.per_device_train_batch_size,
-        per_device_eval_batch_size=args.per_device_eval_batch_size,
-        gradient_accumulation_steps=args.gradient_accumulation_steps,
-        weight_decay=args.weight_decay,
-        warmup_ratio=args.warmup_ratio,
-        logging_steps=args.logging_steps,
-        evaluation_strategy="steps",
-        eval_steps=args.eval_steps,
-        save_steps=args.save_steps,
-        save_total_limit=2,
-        load_best_model_at_end=True,
-        metric_for_best_model="eval_loss",
-        greater_is_better=False,
-        report_to="none",
-        remove_unused_columns=False,
-        bf16=args.bf16,
-        fp16=args.fp16,
-        seed=args.seed,
-    )
+    training_kwargs = {
+        "output_dir": str(output_dir),
+        "learning_rate": args.learning_rate,
+        "num_train_epochs": args.num_train_epochs,
+        "per_device_train_batch_size": args.per_device_train_batch_size,
+        "per_device_eval_batch_size": args.per_device_eval_batch_size,
+        "gradient_accumulation_steps": args.gradient_accumulation_steps,
+        "weight_decay": args.weight_decay,
+        "warmup_ratio": args.warmup_ratio,
+        "logging_steps": args.logging_steps,
+        "eval_steps": args.eval_steps,
+        "save_steps": args.save_steps,
+        "save_total_limit": 2,
+        "load_best_model_at_end": True,
+        "metric_for_best_model": "eval_loss",
+        "greater_is_better": False,
+        "report_to": "none",
+        "remove_unused_columns": False,
+        "bf16": args.bf16,
+        "fp16": args.fp16,
+        "seed": args.seed,
+    }
+    training_args_signature = inspect.signature(TrainingArguments.__init__)
+    if "evaluation_strategy" in training_args_signature.parameters:
+        training_kwargs["evaluation_strategy"] = "steps"
+    elif "eval_strategy" in training_args_signature.parameters:
+        training_kwargs["eval_strategy"] = "steps"
 
-    trainer = Trainer(
-        model=model,
-        args=training_args,
-        train_dataset=tokenized["train"],
-        eval_dataset=tokenized["validation"],
-        tokenizer=tokenizer,
-        data_collator=DataCollatorForSeq2Seq(tokenizer=tokenizer, padding=True),
-        compute_metrics=compute_metrics,
-    )
+    training_args = TrainingArguments(**training_kwargs)
+
+    trainer_kwargs = {
+        "model": model,
+        "args": training_args,
+        "train_dataset": tokenized["train"],
+        "eval_dataset": tokenized["validation"],
+        "data_collator": DataCollatorForSeq2Seq(tokenizer=tokenizer, padding=True),
+        "compute_metrics": compute_metrics,
+    }
+    trainer_signature = inspect.signature(Trainer.__init__)
+    if "tokenizer" in trainer_signature.parameters:
+        trainer_kwargs["tokenizer"] = tokenizer
+    elif "processing_class" in trainer_signature.parameters:
+        trainer_kwargs["processing_class"] = tokenizer
+
+    trainer = Trainer(**trainer_kwargs)
 
     train_result = trainer.train()
     metrics = trainer.evaluate()
