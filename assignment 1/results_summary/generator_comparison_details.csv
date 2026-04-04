@@ -1,0 +1,82 @@
+file,question,question_key,question_label,generator_backend,model,answer,sources
+compare_models_20260402_224341_what_is_the_evaluation_criteria_for_generative_ai_.json,What is the evaluation criteria for Generative AI and LLMs?,genai_evaluation,Generative AI evaluation criteria,huggingface,meta-llama/Llama-3.1-8B-Instruct,"**Evaluation Criteria for Generative AI and LLMs:**
+
+The evaluation criteria for Generative AI and LLMs is based on the relative grading method outlined in the university's academic regulations.
+
+**Justification:**
+The evaluation criteria is mentioned in the Evaluation Summary section of the course handout, which states that the final grade will be determined by the marks or grades earned during the project's phase-wise evaluations and the end-term assessment. The relative grading method is used to determine the grades.
+
+**Sources:**
+Generative AI and LLMs_CourseHandout.pdf",Generative AI and LLMs_CourseHandout.pdf
+compare_models_20260402_224341_what_is_the_evaluation_criteria_for_generative_ai_.json,What is the evaluation criteria for Generative AI and LLMs?,genai_evaluation,Generative AI evaluation criteria,huggingface,openai/gpt-oss-120b,"**Evaluation criteria**
+
+- **Quiz** – 20 % of the final grade (20 MCQs, 1 mark each, 20‑30 min).  
+- **Assignments 1 & 2** – each 20 % (total 40 %); programming assignments evaluated offline with a demo and viva.  
+- **Comprehensive Project** – 40 %; includes a written report, coding deliverables, presentation, demonstration and viva.  
+
+All components together account for 100 % of the course grade. A minimum of **40 %** of the total marks is required to be eligible for grading. The course uses the university’s relative grading method, and any AI‑generated code or plagiarism is subject to the Unfair Means policy.
+
+**Justification**  
+Context 1 lists the evaluation components, their weightages (Quiz 20 %, Assignments 40 %, Project 40 %), the assessment format (MCQs, programming demos, viva, report, presentation), the minimum 40 % pass requirement, and notes on relative grading and plagiarism policy.
+
+**Sources**  
+Generative AI and LLMs_CourseHandout.pdf",Generative AI and LLMs_CourseHandout.pdf
+compare_models_20260402_225121_what_is_the_evaluation_criteria_for_theory_of_comp.json,What is the evaluation criteria for Theory of Computation?,toc_evaluation,Theory of Computation evaluation criteria,huggingface,meta-llama/Llama-3.1-8B-Instruct,"**Evaluation Criteria for Theory of Computation:**
+
+The evaluation criteria for Theory of Computation is based on the marks/grades obtained in the Mid-semester exam along with other assessments defined in the assessment table.
+
+**Concise Answer:**
+
+The evaluation criteria includes:
+- Mid Semester Examination (30%)
+- Quiz 1 & 2 (30%)
+- End Term Presentation (40%)
+
+**Justification:**
+
+According to the Evaluation Summary section of the course handout, the final grade will be based on the marks/grades obtained in the Mid-semester exam along with other assessments defined in the assessment table. The evaluation component weightage is as follows:
+- Mid Semester Examination (30%)
+- Quiz 1 & 2 (30%)
+- End Term Presentation (40%)
+
+**Sources:**
+- Course Handout - ToC (Jan-June).pdf",Course Handout - ToC (Jan-June).pdf
+compare_models_20260402_225121_what_is_the_evaluation_criteria_for_theory_of_comp.json,What is the evaluation criteria for Theory of Computation?,toc_evaluation,Theory of Computation evaluation criteria,huggingface,openai/gpt-oss-120b,"**Evaluation criteria for Theory of Computation (CSE2721)**  
+
+| Component | Weightage | Timing / Remarks | CO Mapping |
+|-----------|-----------|------------------|------------|
+| Quiz 1 & 2 (online MCQ, closed‑book) | 2 × 15 % = **30 %** | 1st/2nd week of March and 2nd/3rd week of April | CO1, CO2, CO3 |
+| Mid‑Semester Examination (written, closed‑book) | **30 %** | As per university calendar | CO1, CO2 |
+| End‑Term Presentation (take‑home assignment, presentation & viva) | **20 % + 10 % + 10 % = 40 %** | After Mid‑Semester | CO1, CO2, CO3 |
+
+The overall grade is the sum of these three components (30 % + 30 % + 40 % = 100 %). A relative grading method per university regulations is applied.
+
+**Justification** – The Evaluation Summary section lists the three assessment items, their weightages, timelines, and the course outcomes they address (CO1‑CO3)【Context 1】. The same table appears in the Assessment Pattern portion of the Textbooks section【Context 2】.
+
+**Sources**  
+- Course Handout - ToC (Jan-June).pdf (Evaluation Summary, Textbooks sections)",Course Handout - ToC (Jan-June).pdf
+compare_models_20260403_134427_what_is_the_no_of_credits_for_theory_of_computatio.json,What is the no of credits  for Theory of Computation?,toc_credits,Theory of Computation credits,huggingface,meta-llama/Llama-3.1-8B-Instruct,"The number of credits for Theory of Computation is 3. This information is supported by multiple contexts, including the course title and credits section in Context 1 and the repeated mention of 3 credits in Contexts 2, 3, and 4. The course handouts from ToC (Jan-June).pdf support this information.",Course Handout - ToC (Jan-June).pdf
+compare_models_20260403_134427_what_is_the_no_of_credits_for_theory_of_computatio.json,What is the no of credits  for Theory of Computation?,toc_credits,Theory of Computation credits,huggingface,openai/gpt-oss-120b,"The Theory of Computation course carries three credits. This information is listed in the credits section of the Course Handout – ToC (Jan‑June).pdf, where the course code CSE2721 is shown with a credit value of 3.",Course Handout - ToC (Jan-June).pdf
+compare_models_20260403_221419_chroma_sentence_transformers_all_minilm_l6_v2_meta_what_is_the_evaluation_criteria_for_iot_networks_a.json,"What is the evaluation criteria for IoT Networks,
+  Architectures and Applications?",iot_evaluation,IoT evaluation criteria,huggingface,meta-llama/Llama-3.1-8B-Instruct,"The evaluation criteria for IoT Networks, Architectures and Applications is based on the marks/grades obtained in the mid-term and end-term evaluations along with other components as defined in the evaluation plan/table, with a minimum of 40% of marks required to become eligible for grading. This evaluation criteria is supported by the Evaluation Summary section in the IoT Networks, Architectures and Applications-CSE 2023 Batch.pdf handouts, which outlines the relative grading method and the weightage of various evaluation components. The exact evaluation plan is also mentioned in the Assessment Pattern section of the Reference Book section in the same handouts."," IoT Networks, Architectures and Applications-CSE 2023 Batch.pdf"
+compare_models_20260403_221419_chroma_sentence_transformers_all_minilm_l6_v2_meta_what_is_the_evaluation_criteria_for_iot_networks_a.json,"What is the evaluation criteria for IoT Networks,
+  Architectures and Applications?",iot_evaluation,IoT evaluation criteria,huggingface,openai/gpt-oss-120b,"The evaluation criteria are a Mid‑Term Exam (30 %), Lab Assignments (20 %), a Coursera Certification (10 %) and an End‑Term project (demonstration, viva and report) worth 40 %. This breakdown is detailed in the Evaluation Summary and Reference Book sections of the “IoT Networks, Architectures and Applications‑CSE 2023 Batch.pdf” handout."," IoT Networks, Architectures and Applications-CSE 2023 Batch.pdf"
+compare_models_20260403_221626_chroma_sentence_transformers_all_minilm_l6_v2_meta_what_topics_are_covered_in_iot_networks_architectu.json,"What topics are covered in IoT Networks, Architectures
+  and Applications?",iot_topics,IoT topics covered,huggingface,meta-llama/Llama-3.1-8B-Instruct,"The topics covered in IoT Networks, Architectures and Applications include basics of networking, OSI and TCP/IP models, addressing, and TCP connections; what is IoT and why is IoT; applications of IoT, potential and challenges; IoT network architectures; types of communication, including M2M and machine to cloud.
+
+These topics are covered in 48 sessions, with a mix of theory and lab sessions, as outlined in the course syllabus, which is supported by the context ""IoT Networks, Architectures and Applications-CSE 2023 Batch.pdf""."," IoT Networks, Architectures and Applications-CSE 2023 Batch.pdf"
+compare_models_20260403_221626_chroma_sentence_transformers_all_minilm_l6_v2_meta_what_topics_are_covered_in_iot_networks_architectu.json,"What topics are covered in IoT Networks, Architectures
+  and Applications?",iot_topics,IoT topics covered,huggingface,openai/gpt-oss-120b,"The course covers basics of networking, OSI and TCP/IP models, addressing and TCP connections; an introduction to what IoT is and why it matters; IoT applications together with their potential and challenges; IoT network architectures; and various types of communication such as M2M and machine‑to‑cloud. These topics are enumerated in the “Topics” section of the IoT Networks, Architectures and Applications handout (IoT Networks, Architectures and Applications‑CSE 2023 Batch.pdf)."," IoT Networks, Architectures and Applications-CSE 2023 Batch.pdf"
+compare_models_20260403_221827_chroma_sentence_transformers_all_minilm_l6_v2_meta_what_is_the_evaluation_criteria_for_applied_machin.json,"What is the evaluation criteria for Applied Machine
+  Learning in Health Care?",healthcare_evaluation,Healthcare evaluation criteria,huggingface,meta-llama/Llama-3.1-8B-Instruct,"The evaluation criteria for Applied Machine Learning in Health Care involves a relative grading method, where the final grade will be based on the marks obtained in various assessment components, including quizzes, assignments, mid-term presentations, and a project, with a weightage of 20%, 20%, 20%, and 40% respectively.
+
+This evaluation criteria is supported by the assessment table in the Evaluation Summary section of the 2025_course_handout_AMCH.pdf, which outlines the evaluation component weightage and schedule. Additionally, the specific evaluation criteria for each assessment component, such as quizzes, assignments, and presentations, are also outlined in the same section.
+
+The relative grading method is further supported by the academic regulations of the university, as mentioned in the Evaluation Summary section of the 2025_course_handout_AMCH.pdf.",2025_course_handout_AMCH.pdf
+compare_models_20260403_221827_chroma_sentence_transformers_all_minilm_l6_v2_meta_what_is_the_evaluation_criteria_for_applied_machin.json,"What is the evaluation criteria for Applied Machine
+  Learning in Health Care?",healthcare_evaluation,Healthcare evaluation criteria,huggingface,openai/gpt-oss-120b,"The course is assessed through four components – two quizzes worth a combined 20 % (each quiz 10 %), an assignment worth 20 %, a mid‑term presentation worth 20 % and a final project worth 40 %, with each component graded on understanding of concepts, timeliness and problem‑solving. This weighting and the detailed rubrics are laid out in the Evaluation Summary of the 2025_course_handout_AMCH.pdf, which also notes that the overall grade follows the university’s relative grading method.",2025_course_handout_AMCH.pdf
+compare_models_20260403_224214_chroma_sentence_transformers_all_minilm_l6_v2_meta_how_many_quiz_are_there_in_machine_learning_for_he.json,How many quiz are there in machine learning for healthcare?,how many quiz are there in machine learning for healthcare?,How many quiz are there in machine learning for healthcare?,huggingface,meta-llama/Llama-3.1-8B-Instruct,"There is one quiz in the Applied Machine Learning in Health Care course.
+This quiz is a 20-minute-long closed-book assessment component that carries a weightage of 40% for Understanding of Concepts.
+The quiz is used to validate students' understanding of epidemiological concepts such as incidence, prevalence, compartmental models, and time-series basics.
+The relevant information is found in the 2025_course_handout_AMCH.pdf file, specifically in the sections CO1 U AP 6 and Document Overview.",2025_course_handout_AMCH.pdf
+compare_models_20260403_224214_chroma_sentence_transformers_all_minilm_l6_v2_meta_how_many_quiz_are_there_in_machine_learning_for_he.json,How many quiz are there in machine learning for healthcare?,how many quiz are there in machine learning for healthcare?,How many quiz are there in machine learning for healthcare?,huggingface,openai/gpt-oss-120b,There is no information in the handouts about how many quizzes are scheduled for the Applied Machine Learning in Health Care course. The retrieved sections describe a quiz as a 20‑minute closed‑book assessment component but do not state the total number of quizzes. This lack of detail is evident in the documents from the 2025_course_handout_AMCH.pdf file.,2025_course_handout_AMCH.pdf

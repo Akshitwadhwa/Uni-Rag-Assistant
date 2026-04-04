@@ -1,0 +1,45 @@
+{
+  "question": "What topics are covered in IoT Networks, Architectures\n  and Applications?",
+  "generator_backend": "huggingface",
+  "generator_model": "meta-llama/Llama-3.1-8B-Instruct",
+  "vector_store": "faiss",
+  "embedding_model": "BAAI/bge-base-en-v1.5",
+  "answer": "The topics covered in IoT Networks, Architectures and Applications include basics of networking, OSI and TCP/IP models, addressing, and TCP connections; what is IoT and why is IoT; applications of IoT, potential, and challenges; IoT network architectures; types of communication; and network protocols and standards for IoT connectivity, among others. These topics are covered in the course syllabus, which outlines the various sections and their corresponding sessions, and are supported by the course handouts, including IoT Networks, Architectures and Applications-CSE 2023 Batch.pdf.",
+  "retrieved_chunks": [
+    {
+      "score": 1.3614,
+      "source": " IoT Networks, Architectures and Applications-CSE 2023 Batch.pdf",
+      "subject_name": "IoT Networks, Architectures and Applications",
+      "section_title": "Topics of the course",
+      "text": "Course: IoT Networks, Architectures and Applications\nCourse Code: CSE3722\nCredits: 03 (L-D-P: 3-0-0)\nSection: Topics of the course\nSection Type: syllabus\n\nTopics Number of\nSessions (48)\nCourse\nOutcomes\nReference\nBasics of networking, OSI and TCP/IP models,\nAddressing, TCP connections.\n2 Theory + 1\nLab CO1 T1: Chapter-1\nWhat is IoT and why is IoT. 3 Theory + 1\nLab CO1 T1: Chapter-4\nApplications of IoT, potential and challenges. 1 Theory + 1\nLab CO1 T1: Chapter-15\nIoT network architectures. 3 Theory + 1\nLab CO1 R1: Chapter-2\nTypes of communication: M2M, machine to cloud, etc. 2 Theory + 1\nLab CO2 T2: Chapter-1 and 3."
+    },
+    {
+      "score": 1.0955,
+      "source": " IoT Networks, Architectures and Applications-CSE 2023 Batch.pdf",
+      "subject_name": "IoT Networks, Architectures and Applications",
+      "section_title": "Course Coordinator",
+      "text": "Course: IoT Networks, Architectures and Applications\nCourse Code: CSE3722\nCredits: 03 (L-D-P: 3-0-0)\nSection: Course Coordinator\nSection Type: faculty\n\nDr. Sandeep Kumar\nEmail: sandeep.kumar@bmu.edu.in\nContact No: +91-9133872511\nOffice: 67, IV Floor, E2 Building\n\nAim of the course : This course is designed to provide students with solid technical knowledge and skills to\nunderstand the Internet of Things (IoT) systems. The beginning portion focuses on the basic concepts,\narchitectures, applications and design challenges of the internet of things. The various topics on the IoT\nprotocols, gateway, computing layers, security and wireless sensing have been covered in the middle portion\nof this course. The remaining part takes up the IoT circuits, embedded systems, case studies and a number of\nonline IoT platforms.\nCourse Outcomes (CO): At the end of the course the students should be able to do the following:\nCourse Outcome Statement Mapped\nComponent\nAssociated Activities / Assessment\nCO1 Understand the basic\nconcepts, network\narchitectures, applications and\ndesign challenges in the\ninternet of things.\nEmployability \uf0ae Intensive theory sessions.\n\uf0ae In-class tool demonstrations\n\uf0ae Industry case studies etc.\nCO2 Analyse the functionality of\nvarious computing paradigms,\nsensor networks, IoT protocols\nand security aspects.\nSkill Development \uf0ae Hands-on practical sessions in labs.\n\uf0ae Experiential learning on the simulation\nplatforms e.g. WokWi, Proteus, CupCarbon,\nMATLAB Simulink etc.\n\uf0ae Data communication to the Android Apps\nand cloud platforms.\nCO3 Apply the acquired knowledge\nto design IoT circuits and\nsystems.\nEntrepreneurship,\nSkill Development\n\uf0ae Getting familiar with cloud services such as\nBlynk, ThingSpeak, HiveMQ, CloudMQTT,\nBolt, PushBullet etc.\n\uf0ae Design and development of the prototypes\nbased on the real world applications.\n\nPrerequisite: if any\n1. Basic knowledge of microcontroller boards.\n2. Programming in Python and C."
+    },
+    {
+      "score": 1.0868,
+      "source": " IoT Networks, Architectures and Applications-CSE 2023 Batch.pdf",
+      "subject_name": "IoT Networks, Architectures and Applications",
+      "section_title": "Network protocols and standards for IoT Connectivity",
+      "text": "Course: IoT Networks, Architectures and Applications\nCourse Code: CSE3722\nCredits: 03 (L-D-P: 3-0-0)\nSection: Network protocols and standards for IoT Connectivity\nSection Type: general\n\nIEEE-802.15.4, ZigBee, RFID, NFC, Z-Wave, SigFox,\nLoRa, NB-IoT, Wi-Fi, Bluetooth.\n3 Theory + 1\nLab CO2\nT1: Chapter-7\nNetwork protocols and standards for IoT\ncommunications: IPv6, RPL, 6LoWPAN, MQTT, MQTT-\nSN, CoAP, AMQP, XMPP, WebSocket, EPC and uCode.\n3 Theory + 1\nLab CO2\nT1: Chapter-8.\nIoT Gateway: Overview of hardware and software.\nComputing Technologies: Cloud and fog computing.\n3 Theory + 1\nLab CO2 T1: Chapter-10, 11\nand Class Notes.\nBasics of Security: Network, transport and application\nlayer Security.\nWireless Sensor Networks: Nodes, features,\narchitecture and deployment.\n2 Theory + 1\nLab CO2\nT1: Chapter-2 and 3.\nCircuits: overview of circuits used in IoT, battery\ncurrent, and wireless links, digital computing and\nanalog to digital interfaces.\n3 Theory + 2\nLab CO3\nClass Notes\nEmbedded systems: internet connectivity and MGC\narchitecture, Cortex M and BLE.\n3 Theory + 1\nLab CO3 Class Notes\nIoT case studies: Industrial IoT, home automation,\ninternet of vehicles, e-Health, smart cities, etc.\n3 Theory + 2\nLab CO3 R2: Chapter-3, and\nClass Notes.\nOpen source IoT platforms: CupCarbon, Wokwi,\nProteus, PushBullet, Bolt, Blynk, ThingSpeak etc.\n1 Theory + 2\nLab CO3 Class Notes\n\nCO/PO Mapping: (1: weak, 2: medium, 3: strong)"
+    },
+    {
+      "score": 1.0756,
+      "source": " IoT Networks, Architectures and Applications-CSE 2023 Batch.pdf",
+      "subject_name": "IoT Networks, Architectures and Applications",
+      "section_title": "Textbooks",
+      "text": "Course: IoT Networks, Architectures and Applications\nCourse Code: CSE3722\nCredits: 03 (L-D-P: 3-0-0)\nSection: Textbooks\nSection Type: references\n\n(T1): \u201cIntroduction to IoT\u201d by Sudip Misra, Anandarup Mukherjee and Arijit Roy. Cambridge\nUniversity Press, 2021 edition.\n(T2): \u201cInternet of Things: A Hands-on Approach\u201d by Arshdeep Bahga and Vijay Madisetti. Universities\nPress India Pvt. Ltd., 1st edition (2016)."
+    },
+    {
+      "score": 1.0447,
+      "source": " IoT Networks, Architectures and Applications-CSE 2023 Batch.pdf",
+      "subject_name": "IoT Networks, Architectures and Applications",
+      "section_title": "Document Overview",
+      "text": "Course: IoT Networks, Architectures and Applications\nCourse Code: CSE3722\nCredits: 03 (L-D-P: 3-0-0)\nSection: Document Overview\nSection Type: general\n\nCourse Code: CSE3722 Course Name: IoT Networks,\nArchitectures and Applications\n\nCredits: 03 (L-D-P: 3-0-0)\n\nContact Sessions: 03\nBatch: CSE 2023, 6th Semester\nAcademic Year: 2025-26\nSemester Duration: 19 Jan 2026 to\n08 May 2026"
+    }
+  ]
+}
