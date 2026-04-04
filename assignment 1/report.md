@@ -129,13 +129,28 @@ This helps the LLM understand the context provenance and answer more reliably. T
 
 ## 7. LLM-Based Answer Generation
 
-The final answer generation was performed using hosted Hugging Face inference. The primary LLM used in the final retrieval experiments was:
+The final answer generation stage was implemented through hosted Hugging Face inference. In the current project, two LLMs were used in the generator comparison experiments:
 
 - `meta-llama/Llama-3.1-8B-Instruct`
+- `openai/gpt-oss-120b`
 
-The system also supports multi-model comparison through `compare-models`, and a second model can be tested depending on provider availability. This logic is implemented in [generation.py](/Users/Lenovo/Desktop/sem 6/Gen_AI group assignment/assignment 1/src/rag_assignment/generation.py).
+The generator layer is implemented in [generation.py](/Users/Lenovo/Desktop/sem 6/Gen_AI group assignment/assignment 1/src/rag_assignment/generation.py), while multi-model comparisons are executed through the `compare-models` command in [cli.py](/Users/Lenovo/Desktop/sem 6/Gen_AI group assignment/assignment 1/src/rag_assignment/cli.py).
 
-For the current project, Llama 3.1 was used consistently in the retrieval comparison matrix so that embedding and vector database comparisons remained fair.
+### Role of Each LLM in the Experiments
+
+- **Llama 3.1** was used as the fixed generator in the main retrieval comparison matrix so that FAISS vs Chroma and MiniLM vs BGE could be compared fairly.
+- **GPT-OSS 120B** was used as the second generator in `compare-models` experiments to compare answer style, completeness, and grounding on the same retrieved context.
+
+### Observations from LLM Comparison
+
+Based on the saved comparison logs in [Compare](/Users/Lenovo/Desktop/sem 6/Gen_AI group assignment/assignment 1/Compare) and [Complex_Commands](/Users/Lenovo/Desktop/sem 6/Gen_AI group assignment/assignment 1/Complex_Commands):
+
+- `meta-llama/Llama-3.1-8B-Instruct` generally produced more direct and concise responses.
+- `openai/gpt-oss-120b` often generated more explanatory or polished comparative answers.
+- For simple factual queries, both models worked reasonably well when retrieval quality was good.
+- For multi-course comparison questions, the quality of the retrieved context had a strong impact on both models.
+
+Thus, the LLM comparison requirement of the assignment was satisfied by comparing two different hosted open models on the same retrieved context.
 
 ## 8. Comparative Evaluation of System Configurations
 

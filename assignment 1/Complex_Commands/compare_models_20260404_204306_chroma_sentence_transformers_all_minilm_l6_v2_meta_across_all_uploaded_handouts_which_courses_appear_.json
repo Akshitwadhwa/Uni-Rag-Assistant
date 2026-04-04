@@ -1,0 +1,90 @@
+{
+  "question": "Across all uploaded handouts, which courses appear\n  more theory-heavy and which appear more application-oriented? Use\n  topics, credits, practical work, project components, and evaluation\n  pattern to justify the comparison.",
+  "generator_backend": "huggingface",
+  "retrieved_context": [
+    {
+      "score": 0.8138,
+      "subject_name": "Theory of Computation",
+      "section_title": "Credits",
+      "source": "Course Handout - ToC (Jan-June).pdf"
+    },
+    {
+      "score": 0.7679,
+      "subject_name": "Generative AI and LLMs",
+      "section_title": "Credits",
+      "source": "Generative AI and LLMs_CourseHandout.pdf"
+    },
+    {
+      "score": 0.766,
+      "subject_name": "Applied Machine Learning in Health Care",
+      "section_title": "Credits",
+      "source": "2025_course_handout_AMCH.pdf"
+    },
+    {
+      "score": 0.7638,
+      "subject_name": "IoT Networks, Architectures and Applications",
+      "section_title": "Evaluation Summary",
+      "source": " IoT Networks, Architectures and Applications-CSE 2023 Batch.pdf"
+    },
+    {
+      "score": 0.7619,
+      "subject_name": "IoT Networks, Architectures and Applications",
+      "section_title": "Credits",
+      "source": " IoT Networks, Architectures and Applications-CSE 2023 Batch.pdf"
+    },
+    {
+      "score": 0.7552,
+      "subject_name": "Cryptography",
+      "section_title": "Credits",
+      "source": "Cryptography_CSE3703.pdf"
+    },
+    {
+      "score": 0.7475,
+      "subject_name": "Cryptography",
+      "section_title": "Assessment Pattern",
+      "source": "Cryptography_CSE3703.pdf"
+    },
+    {
+      "score": 0.5013,
+      "subject_name": "Theory of Computation",
+      "section_title": "Support for Slow Learners",
+      "source": "Course Handout - ToC (Jan-June).pdf"
+    },
+    {
+      "score": 0.4987,
+      "subject_name": "IoT Networks, Architectures and Applications",
+      "section_title": "Experiential Learning Component",
+      "source": " IoT Networks, Architectures and Applications-CSE 2023 Batch.pdf"
+    },
+    {
+      "score": 0.4969,
+      "subject_name": "Generative AI and LLMs",
+      "section_title": "following",
+      "source": "Generative AI and LLMs_CourseHandout.pdf"
+    }
+  ],
+  "model_outputs": [
+    {
+      "model": "meta-llama/Llama-3.1-8B-Instruct",
+      "answer": "Courses that appear more theory-heavy are Theory of Computation (CSE2721) and Cryptography (CSE3703), while courses that appear more application-oriented are Generative AI and LLMs (CSE3720) and IoT Networks, Architectures and Applications (CSE3722). Theory of Computation (CSE2721) is a theory-heavy course as it has a focus on the theoretical foundations of computation, with topics such as automata theory, formal languages, and computability theory, and it has a relatively low practical work component. This is supported by the course handout for Theory of Computation (Context 1), which does not mention any practical work or project components. Cryptography (CSE3703) is also a theory-heavy course as it has a focus on the theoretical aspects of cryptography, with topics such as number theory, algebraic geometry, and computational complexity, and it has a relatively low practical work component. This is supported by the course handout for Cryptography (Context 6), which mentions that the course covers the theoretical foundations of cryptography, and by the assessment pattern for Cryptography (Context 7), which includes a comprehensive assessment of theoretical knowledge. Generative AI and LLMs (CSE3720) and IoT Networks, Architectures and Applications (CSE3722) are application-oriented courses as they have a focus on practical applications of AI and IoT technologies, with topics such as generative AI models, large language models, and IoT networks and architectures, and they have a significant practical work component. This is supported by the course handout for Generative AI and LLMs (Context 10), which mentions that the course covers practical applications of generative AI and LLMs, and by the assessment pattern for IoT Networks, Architectures and Applications (Context 4), which includes a project-based end-term evaluation. The course handouts for IoT Networks, Architectures and Applications (Context 5) and Generative AI and LLMs (Context 2) also support this comparison, as they mention that the courses have a focus on practical applications of IoT and AI technologies, respectively.",
+      "sources": [
+        " IoT Networks, Architectures and Applications-CSE 2023 Batch.pdf",
+        "2025_course_handout_AMCH.pdf",
+        "Course Handout - ToC (Jan-June).pdf",
+        "Cryptography_CSE3703.pdf",
+        "Generative AI and LLMs_CourseHandout.pdf"
+      ]
+    },
+    {
+      "model": "openai/gpt-oss-120b",
+      "answer": "The Theory of Computation (CSE2721) and Cryptography (CSE3703) appear more theory\u2011heavy, while Generative AI and LLMs (CSE3720) and IoT Networks, Architectures and Applications (CSE3722) are more application\u2011oriented. The Theory of Computation handout provides only credit information and no practical components, and the Cryptography handout lists a traditional assessment pattern of assignments, mid\u2011semester exam, quiz and end\u2011term evaluation focused on conceptual understanding (Cryptography_CSE3703.pdf). In contrast, the Generative AI handout details extensive lab sessions, tool demonstrations, mini\u2011assignments and a capstone project across seven units (Generative AI and LLMs_CourseHandout.pdf), and the IoT Networks handout emphasizes lab assignments (20 %), a Coursera certification (10 %) and a project\u2011based end\u2011term (40 %) that together constitute 60 % experiential learning (IoT Networks, Architectures and Applications-CSE 2023 Batch.pdf).",
+      "sources": [
+        " IoT Networks, Architectures and Applications-CSE 2023 Batch.pdf",
+        "2025_course_handout_AMCH.pdf",
+        "Course Handout - ToC (Jan-June).pdf",
+        "Cryptography_CSE3703.pdf",
+        "Generative AI and LLMs_CourseHandout.pdf"
+      ]
+    }
+  ]
+}

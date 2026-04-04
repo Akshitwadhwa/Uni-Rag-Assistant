@@ -1,0 +1,17 @@
+{
+  "question": "Compare the topics covered in Generative AI and LLMs,\n  Making Causal Inferences, and Applied Machine Learning in Health\n  Care. Highlight the overlap and the unique focus of each course.",
+  "generator_backend": "huggingface",
+  "retrieved_context": [],
+  "model_outputs": [
+    {
+      "model": "meta-llama/Llama-3.1-8B-Instruct",
+      "answer": "The topics covered in Generative AI and LLMs, Making Causal Inferences, and Applied Machine Learning in Health Care overlap in their focus on machine learning techniques, but each course has a unique focus. Generative AI and LLMs focuses on the development and application of large language models, while Making Causal Inferences explores the use of machine learning to identify causal relationships in data. Applied Machine Learning in Health Care, on the other hand, applies machine learning techniques to real-world health care problems, with a focus on the development of predictive models and the evaluation of their performance. The overlap between these courses is evident in their shared emphasis on machine learning techniques, but each course has a distinct focus that sets it apart from the others. The course details are supported by the course handouts for \"Generative AI and LLMs\" (filename: Generative_Ai_And_Llms.pdf), \"Making Causal Inferences\" (filename: Making_Causal_Inferences.pdf), and \"Applied Machine Learning in Health Care\" (filename: Applied_Machine_Learning_In_Healthcare.pdf).",
+      "sources": []
+    },
+    {
+      "model": "openai/gpt-oss-120b",
+      "answer": "The information comparing the topics covered in Generative AI and LLMs, Making Causal Inferences, and Applied Machine Learning in Health Care is not available in the uploaded handouts. The retrieved context does not contain any details about the syllabus units, course outlines, or specific content for these subjects, so there is no source material to reference. Consequently, no handout filenames can be cited.",
+      "sources": []
+    }
+  ]
+}

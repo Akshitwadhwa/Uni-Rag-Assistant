@@ -1,0 +1,17 @@
+{
+  "question": "Compare Cryptography and Network Security in terms of\n  course focus, major topics, and security concepts mentioned in the\n  handouts. Also mention whether either course emphasizes practical or\n  application-based components.",
+  "generator_backend": "huggingface",
+  "retrieved_context": [],
+  "model_outputs": [
+    {
+      "model": "meta-llama/Llama-3.1-8B-Instruct",
+      "answer": "Cryptography and Network Security courses focus on different aspects of information security, with Cryptography primarily focusing on the mathematical and theoretical aspects of secure data transmission, while Network Security emphasizes the practical implementation of security measures in computer networks. This distinction is evident in the course handouts, where Cryptography covers topics such as encryption algorithms, key management, and cryptographic protocols, whereas Network Security delves into network architecture, threat analysis, and security protocols for network communication. The emphasis on practical implementation in Network Security is also reflected in the inclusion of case studies and hands-on exercises in the course handouts. The source filenames that support this comparison are \"Cryptography Syllabus.pdf\" and \"Network Security Course Outline.docx\".",
+      "sources": []
+    },
+    {
+      "model": "openai/gpt-oss-120b",
+      "answer": "The information is not available in the uploaded handouts. The retrieved context does not contain any details about the Cryptography or Network Security courses, such as their focus, topics, or practical components. Since no handout files were provided, no source filenames can be referenced.",
+      "sources": []
+    }
+  ]
+}

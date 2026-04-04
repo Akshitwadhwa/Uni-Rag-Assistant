@@ -1,0 +1,72 @@
+{
+  "question": "Compare the evaluation criteria of Generative AI and\n  LLMs, IoT Networks, and Applied Machine Learning in Health Care.\n  Mention the weightage of quizzes, assignments, projects, practical\n  work, and end-sem evaluation for each course.",
+  "generator_backend": "huggingface",
+  "retrieved_context": [
+    {
+      "score": 1.3932,
+      "subject_name": "Generative AI and LLMs",
+      "section_title": "Evaluation Summary",
+      "source": "Generative AI and LLMs_CourseHandout.pdf"
+    },
+    {
+      "score": 1.3615,
+      "subject_name": "Applied Machine Learning in Health Care",
+      "section_title": "Evaluation Summary",
+      "source": "2025_course_handout_AMCH.pdf"
+    },
+    {
+      "score": 1.0932,
+      "subject_name": "Generative AI and LLMs",
+      "section_title": "below",
+      "source": "Generative AI and LLMs_CourseHandout.pdf"
+    },
+    {
+      "score": 1.0648,
+      "subject_name": "Generative AI and LLMs",
+      "section_title": "following",
+      "source": "Generative AI and LLMs_CourseHandout.pdf"
+    },
+    {
+      "score": 1.0492,
+      "subject_name": "Generative AI and LLMs",
+      "section_title": "22 A im of the Course",
+      "source": "Generative AI and LLMs_CourseHandout.pdf"
+    },
+    {
+      "score": 1.0492,
+      "subject_name": "Generative AI and LLMs",
+      "section_title": "below",
+      "source": "Generative AI and LLMs_CourseHandout.pdf"
+    },
+    {
+      "score": 1.0472,
+      "subject_name": "Generative AI and LLMs",
+      "section_title": "Video lectures/ MOOC",
+      "source": "Generative AI and LLMs_CourseHandout.pdf"
+    },
+    {
+      "score": 1.0456,
+      "subject_name": "Generative AI and LLMs",
+      "section_title": "following",
+      "source": "Generative AI and LLMs_CourseHandout.pdf"
+    }
+  ],
+  "model_outputs": [
+    {
+      "model": "meta-llama/Llama-3.1-8B-Instruct",
+      "answer": "The evaluation criteria of Generative AI and LLMs, IoT Networks, and Applied Machine Learning in Health Care differ in terms of weightage of quizzes, assignments, projects, practical work, and end-sem evaluation. The Generative AI and LLMs course has a 20% weightage for quizzes, 40% for assignments, and 40% for a comprehensive project report, with a focus on experiential learning. This is supported by the Evaluation Summary section of the Generative AI and LLMs_CourseHandout.pdf and the following section of the same document. The IoT Networks course is not mentioned in the provided contexts, so there is no information available for comparison. The Applied Machine Learning in Health Care course has a 20% weightage for quizzes, 20% for an assignment, 20% for a mid-term presentation, and 40% for a project. This is supported by the Evaluation Summary section of the 2025_course_handout_AMCH.pdf. The evaluation criteria of these courses are not identical, with the Generative AI and LLMs course placing more emphasis on experiential learning through assignments and projects, while the Applied Machine Learning in Health Care course has a more balanced distribution of weightage across different assessment components.",
+      "sources": [
+        "2025_course_handout_AMCH.pdf",
+        "Generative AI and LLMs_CourseHandout.pdf"
+      ]
+    },
+    {
+      "model": "openai/gpt-oss-120b",
+      "answer": "The Generative AI and LLMs course assigns 20 % to a quiz, 40 % to two programming assignments (each 20 %), and 40 % to the end\u2011semester project, while the Applied Machine Learning in Health Care course allocates 20 % to quizzes, 20 % to an assignment, 20 % to a mid\u2011term presentation, and 40 % to the final project; no evaluation breakdown is provided for an IoT Networks course in the uploaded handouts. The quiz, assignment, and project weightings for the Generative AI and LLMs course are detailed in the Evaluation Summary of the Generative AI and LLMs_CourseHandout.pdf, and the quiz, assignment, mid\u2011term, and project percentages for the Applied Machine Learning in Health Care course are listed in the Evaluation Summary of the 2025_course_handout_AMCH.pdf.",
+      "sources": [
+        "2025_course_handout_AMCH.pdf",
+        "Generative AI and LLMs_CourseHandout.pdf"
+      ]
+    }
+  ]
+}

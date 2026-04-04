@@ -1,0 +1,11 @@
+question_label,config,model,retrieved_context_count,retrieved_sources
+Cryptography vs Network Security comparison,Chroma + BGE,meta-llama/Llama-3.1-8B-Instruct,0,
+Cryptography vs Network Security comparison,Chroma + BGE,openai/gpt-oss-120b,0,
+Evaluation comparison across courses,Chroma + BGE,meta-llama/Llama-3.1-8B-Instruct,0,
+Evaluation comparison across courses,Chroma + BGE,openai/gpt-oss-120b,0,
+Evaluation comparison across courses,FAISS + BGE,meta-llama/Llama-3.1-8B-Instruct,8,"2025_course_handout_AMCH.pdf, Generative AI and LLMs_CourseHandout.pdf"
+Evaluation comparison across courses,FAISS + BGE,openai/gpt-oss-120b,8,"2025_course_handout_AMCH.pdf, Generative AI and LLMs_CourseHandout.pdf"
+Theory-heavy vs application-oriented comparison,Chroma + MiniLM,meta-llama/Llama-3.1-8B-Instruct,10," IoT Networks, Architectures and Applications-CSE 2023 Batch.pdf, 2025_course_handout_AMCH.pdf, Course Handout - ToC (Jan-June).pdf, Cryptography_CSE3703.pdf, Generative AI and LLMs_CourseHandout.pdf"
+Theory-heavy vs application-oriented comparison,Chroma + MiniLM,openai/gpt-oss-120b,10," IoT Networks, Architectures and Applications-CSE 2023 Batch.pdf, 2025_course_handout_AMCH.pdf, Course Handout - ToC (Jan-June).pdf, Cryptography_CSE3703.pdf, Generative AI and LLMs_CourseHandout.pdf"
+Topics comparison across ML-related courses,Chroma + BGE,meta-llama/Llama-3.1-8B-Instruct,0,
+Topics comparison across ML-related courses,Chroma + BGE,openai/gpt-oss-120b,0,

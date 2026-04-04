@@ -54,9 +54,9 @@ def normalize_model_answer(text: str) -> str:
     cleaned = cleaned.replace("\r\n", "\n").replace("\r", "\n")
     cleaned = re.sub(r"\*\*(.*?)\*\*", r"\1", cleaned)
     cleaned = re.sub(r"(?im)^\s*(answer|justification|sources)\s*:\s*", "", cleaned)
-    cleaned = re.sub(r"\n{2,}", "\n\n", cleaned)
-    cleaned = re.sub(r"[ \t]+", " ", cleaned)
-    cleaned = cleaned.replace(" \n", "\n")
+    cleaned = re.sub(r"[\u2028\u2029]", " ", cleaned)
+    cleaned = cleaned.replace("\n", " ")
+    cleaned = re.sub(r"\s+", " ", cleaned)
     cleaned = re.sub(r"\s+([.,;:!?])", r"\1", cleaned)
     return cleaned.strip()
 
