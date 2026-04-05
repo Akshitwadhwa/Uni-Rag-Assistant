@@ -213,7 +213,100 @@ Example system outputs include:
 - topic coverage answers
 - faculty/coordinator answers
 
-## 10. Experimental Analysis
+## 10. Types of Questions Asked to the Model
+
+To evaluate the RAG system properly, the prompts were not limited to only one kind of question. Instead, the model was tested using a spectrum of question types, ranging from simple factual extraction to complex multi-course comparisons. This helped assess not only answer correctness but also retrieval quality, section relevance, and multi-document reasoning ability.
+
+### 10.1 Basic Factual Questions
+
+These questions were designed to test whether the system could retrieve and answer a single explicit fact from one handout.
+
+Examples:
+
+- How many credits are there in Theory of Computation?
+- How many credits are there in Applied Machine Learning in Health Care?
+- Who is the instructor or coordinator for Applied Machine Learning in Health Care?
+
+These questions are useful for validating:
+
+- metadata extraction
+- exact factual grounding
+- retrieval of small but important sections such as credits or faculty
+
+### 10.2 Evaluation-Specific Questions
+
+These questions focus on assessment and evaluation patterns of individual courses. They are more difficult than simple factual queries because the relevant information is often spread across a section or a table rather than a single metadata field.
+
+Examples:
+
+- What is the evaluation criteria for Generative AI and LLMs?
+- What is the evaluation criteria for IoT Networks, Architectures and Applications?
+- What is the evaluation criteria for Applied Machine Learning in Health Care?
+
+These questions test:
+
+- section-aware chunking
+- semantic retrieval of evaluation blocks
+- preservation of exact percentages and marks
+
+### 10.3 Topic and Syllabus Questions
+
+These questions test the ability of the system to retrieve descriptive course-content information rather than only structured metadata.
+
+Examples:
+
+- What topics are covered in IoT Networks, Architectures and Applications?
+- What topics are covered in Cryptography?
+- What will be taught in Theory of Computation?
+
+These prompts are important because syllabus information tends to be distributed across larger chunks of text and requires stronger semantic matching.
+
+### 10.4 Intermediate Comparison Questions
+
+At the next level, two-course comparison questions were used. These require the system to retrieve information from multiple handouts and generate a comparative answer without mixing the course details.
+
+Examples:
+
+- Compare Cryptography and Network Security in terms of course focus, major topics, and security concepts.
+- Compare the evaluation criteria of Generative AI and LLMs and Applied Machine Learning in Health Care.
+
+These questions evaluate:
+
+- multi-document retrieval
+- cross-course comparison
+- comparative summarization grounded in context
+
+### 10.5 Complex Multi-Course Questions
+
+The most advanced prompts used in the project were multi-course comparison questions involving three or more handouts. These were intended to test the full potential of the system and were stored in [Complex_Commands](/Users/Lenovo/Desktop/sem 6/Gen_AI group assignment/assignment 1/Complex_Commands).
+
+Examples:
+
+- Compare the evaluation criteria of Generative AI and LLMs, IoT Networks, and Applied Machine Learning in Health Care. Mention the weightage of quizzes, assignments, projects, practical work, and end-sem evaluation for each course.
+- Compare the topics covered in Generative AI and LLMs, Making Causal Inferences, and Applied Machine Learning in Health Care. Highlight the overlap and the distinct focus of each course.
+- Across all uploaded handouts, which courses appear more theory-heavy and which appear more application-oriented? Use topics, credits, practical work, project components, and evaluation pattern to justify the comparison.
+
+These complex prompts test:
+
+- retrieval from multiple documents at once
+- cross-course reasoning
+- answer grounding across multiple sources
+- the difference in answer style between the two compared LLMs
+
+### 10.6 Importance of Using a Range of Question Types
+
+This range of questions was important because it allowed the project to evaluate the RAG system more realistically. A system that performs well only on direct factual extraction may still fail on section-specific queries or cross-course comparisons. By using simple, intermediate, and complex prompts, the project was able to measure:
+
+- exact factual answering ability
+- section-aware retrieval quality
+- topic-level semantic retrieval
+- multi-document comparison ability
+- robustness of different vector stores and embeddings
+- differences between the two tested LLMs
+
+Thus, the experimental design was not limited to one question style. It covered a progression from direct fact retrieval to complex comparative reasoning over the full uploaded dataset.
+
+## 11. Experimental Analysis
 
 A notebook was created to compare all major results:
 
@@ -229,7 +322,13 @@ The notebook:
 
 This notebook can be used to generate tables and screenshots for the final report.
 
-## 11. Limitations
+For complex multi-course comparison runs, an additional notebook was created:
+
+- [complex_results_comparison.ipynb](/Users/Lenovo/Desktop/sem 6/Gen_AI group assignment/assignment 1/complex_results_comparison.ipynb)
+
+This notebook focuses specifically on the large cross-course comparison questions and compares the outputs of the two hosted LLMs.
+
+## 12. Limitations
 
 The current system has the following limitations:
 
@@ -238,7 +337,7 @@ The current system has the following limitations:
 - model availability depends on the Hugging Face provider support attached to the token
 - no formal automatic evaluation metric such as exact match or F1 was used
 
-## 12. Conclusion
+## 13. Conclusion
 
 This assignment demonstrates a successful implementation of a domain-specific RAG pipeline for course-handout question answering. The system was able to ingest real academic handouts, preprocess them, extract metadata, generate embeddings, index them using FAISS and Chroma, retrieve relevant content, and produce grounded answers using an LLM.
 
