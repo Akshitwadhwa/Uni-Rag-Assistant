@@ -1,0 +1,66 @@
+{
+  "question": "Compare Cryptography and Network Security in terms of course focus and major topics.",
+  "generator_backend": "huggingface",
+  "generator_model": "meta-llama/Llama-3.1-8B-Instruct",
+  "vector_store": "chroma",
+  "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "answer": "The course focus of Cryptography and Network Security is distinct, with Cryptography primarily focusing on the principles and practice of cryptography algorithms and fundamentals of security protocols and techniques, whereas Network Security covers a broader range of topics including network-based security threats and vulnerabilities. This difference in focus is evident in the course outcomes, with Cryptography aiming to enable students to understand fundamental concepts in number theory, field theory, and cryptography (CO1), analyze principles of symmetric and asymmetric encryption algorithms (CO2), apply cryptographic techniques to solve practical problems (CO3), and evaluate different cryptographic algorithms (CO4). In contrast, Network Security is not explicitly mentioned in the provided contexts, suggesting that it is not a part of the current course.",
+  "retrieved_chunks": [
+    {
+      "score": 1.1452,
+      "source": "Cryptography_CSE3703.pdf",
+      "subject_name": "Cryptography",
+      "section_title": "Topics of the course",
+      "text": "Course: Cryptography\nCourse Code: CSE3703\nCredits: 3 (3-0-0)\nSection: Topics of the course\nSection Type: syllabus\n\nTopics Number of Sessions Course ( 48) Outcomes\nNumber Theory and Finite Fields Modular arithmetic, Euclidian 7 CO1 Algorithm, Primality Testing, Fermat\u2019s and Euler\u2019s theorem, Chinese Reminder theorem, Discrete Logarithms, Finite Fields.\nBasic of Cryptography 3 CO2 Cryptography and basic terminologies, Security goals, Security Threats and Vulnerabilities, Security Services, Security Mechanisms\nClassical Encryption Techniques, Symmetric Encryption- Basic 7 CO2 Theory of Enciphering, Stream Cipher, Block Encryption Algorithms: DES, AES, Block Cipher Modes of operation.\nAsymmetric key cryptographic techniques: principles \u2013 RSA \u2013 7 CO2 ElGamal - Elliptic Curve cryptography \u2013 Key distribution and Key exchange protocols\nMessage Authentication Code (MAC), Hash functions, Secure 7 CO3 Hash Algorithm: SHA-1, MD5, Keyed-Hash Message Authentication Code (HMAC).\nDigital Signature 6 CO3 Digital Signature Standard, Digital Signature Algorithm, RSA Digital Signature, Elliptic Curve Digital Signature algorithm.\nUser Authentication Mechanisms 5 CO3 Authentication Fundamentals, Passwords, Authentication Tokens, Certificate-Based Authentication, Biometric Authentication, Kerberos\nHistorical Cryptanalysis, Cryptanalysis of block ciphers, Brute 6 CO4 force attack, Standard ASCII attack, Man in the middle attack, Cryptanalysis of hash functions."
+    },
+    {
+      "score": 0.9596,
+      "source": "Cryptography_CSE3703.pdf",
+      "subject_name": "Cryptography",
+      "section_title": "CO4 3 2 2 2",
+      "text": "Course: Cryptography\nCourse Code: CSE3703\nCredits: 3 (3-0-0)\nSection: CO4 3 2 2 2\nSection Type: general\n\nLearning Resources: Textbook: William Stallings: Cryptography and Network Security, 7th Edition, Prentice-Hall / Pearson Education, Englewood Cliffs /New Delhi, 2017. Reference Books: 1. Michael Goodrich & Roberto Tamassia, \u201cIntroduction to Computer Security\u201d , Prentice-Hall/ Pearson Education, Englewood Cliffs/ New Delhi. 2. Behrouz A Forouzan, \u201c Cryptography and Network security \u201d, 3\nrd\n\nEdition, McGraw Hill Education. 3. Atul Kahate, \u201cCryptography and Network Security\u201d, Tata McGraw Hill Education.\nInternet Links (annotated): Following are the online available resources: MIT equivalent course (Network and Computer Security): https://ocw.mit.edu/courses/electrical- engineering-and computer-science/6-857-network-and-computer-security-spring-2014/index.htm NPTEL equivalent course (Cryptography and Network Security): http://nptel.ac.in/courses/106105031/"
+    },
+    {
+      "score": 0.9058,
+      "source": "Cryptography_CSE3703.pdf",
+      "subject_name": "Cryptography",
+      "section_title": "Document Overview",
+      "text": "Course: Cryptography\nCourse Code: CSE3703\nCredits: 3 (3-0-0)\nSection: Document Overview\nSection Type: general\n\nCourse Code: CSE3703 Course Name: Cryptography\n\nCredits: 3 (3-0-0) Contact Hours: 3 hours Theory per week\nBatch: 2023, 6\nth\nSem Academic Year: 2025-2026\nSemester Duration: 19\nth\nJan,2026 to 8\nth\nMay 2026\nCourse Faculty: Dr. Satyendr Singh [8683856238 : satyendr.singh@bmu.edu.in ] Dr. Monika Mokan [9694934358 : monika.mokan@bmu.edu.in ]\nCourse Coordinator: Name: Dr. Satyendr Singh Email: satyendr.singh@bmu.edu.in Office: IV Floor, E2 Building\nAim of the course : The goal of this course is to understand the principles and practice of cryptography algorithms and fundamentals of security protocols and techniques. It covers cryptography, network-based security threats and vulnerabilities, and practical solutions to system and security.\nCourse Overview and Context: Cryptography is a VI semester core course in computer science and engineering undergraduate program. This course focuses on the principles and applications of cryptographic techniques. This course will provide overview of classical encryption techniques, block ciphers and the data encryption standard, finite fields, advanced encryption standard, confidentiality using symmetric encryption, p ublic-key cryptography, key management, hash and MAC algorithms, digital signatures, and authentication applications. Course Outcomes (CO) : At the end of the course the students should be able to do the following: Course Outcome Statement Mapped Component\nAssociated Activities / Assessment\nCO1 Understand the fundamental concepts in number theory, field theory, and cryptography.\nEmployability \u2192 Intensive theory sessions on number theory, modular arithmetic, and cryptographic foundations. \u2192 In-class explanations of mathematical tools used in cryptography. \u2192 Concept-based assignments and close notebook examinations.\nCO2 Analyze the principles of symmetric and asymmetric encryption algorithms.\nSkill Development\n\u2192 In-depth classroom discussions on symmetric and asymmetric encryption algorithms. \u2192 Algorithm walkthroughs and step-by-step encryption/decryption demonstrations. \u2192 Quiz-based assessment using MCQs to test analytical understanding.\n\nCO3 Apply cryptographic techniques to solve practical p roblems related to data confidentiality, integrity, and authentication.sensors,\nSkill Development\n\u2192 Problem-solving sessions based on encryption, hashing, and digital signature techniques. \u2192 Assignment-based application of cryptographic methods to real-world security scenarios.\nactuators and cloud service p latforms.\n\nCO4 Evaluate different cryptographic algorithms b ased on their strengths, weaknesses, and suitability for various applications.\nEntrepreneurship, Skill Development\n\u2192 Comparative analysis of cryptographic algorithms for secure communication systems. \u2192 Evaluation-focused questions in end semester examination."
+    },
+    {
+      "score": 0.8664,
+      "source": "Cryptography_CSE3703.pdf",
+      "subject_name": "Cryptography",
+      "section_title": "Experiential Learning Component (20 %)",
+      "text": "Course: Cryptography\nCourse Code: CSE3703\nCredits: 3 (3-0-0)\nSection: Experiential Learning Component (20 %)\nSection Type: general\n\nAssignments will include challenging cryptography puzzles and riddles, fostering critical thinking and problem-solving abilities."
+    },
+    {
+      "score": 0.8327,
+      "source": "Cryptography_CSE3703.pdf",
+      "subject_name": "Cryptography",
+      "section_title": "Credits",
+      "text": "Course: Cryptography\nCourse Code: CSE3703\nCredits: 3 (3-0-0)\nSection: Credits\nSection Type: credits\n\nCourse Title: Cryptography\nCourse Code: CSE3703\nCredits: 3 (3-0-0)"
+    },
+    {
+      "score": 0.8163,
+      "source": "Cryptography_CSE3703.pdf",
+      "subject_name": "Cryptography",
+      "section_title": "CO/PO Mapping",
+      "text": "Course: Cryptography\nCourse Code: CSE3703\nCredits: 3 (3-0-0)\nSection: CO/PO Mapping\nSection Type: general\n\nCO/PO Mapping"
+    },
+    {
+      "score": 0.8043,
+      "source": "Cryptography_CSE3703.pdf",
+      "subject_name": "Cryptography",
+      "section_title": "Structured Course Facts",
+      "text": "Course: Cryptography\nCourse Code: CSE3703\nCredits: 3 (3-0-0)\nSection: Structured Course Facts\nSection Type: general\n\nCourse Title: Cryptography\nCourse Code: CSE3703\nCredits: 3 (3-0-0)\nFaculty: Dr. Satyendr Singh [8683856238 : satyendr.singh@bmu.edu.in ] Dr. Monika Mokan [9694934358 : monika.mokan@bmu.edu.in ]\nSemester: unknown\nContact Pattern: 3 hours Theory per week Batch: 2023, 6 th Sem Academic Year: 2025-2026 Semester Duration: 19 th Jan,2026 to 8 th May 2026"
+    },
+    {
+      "score": 0.7956,
+      "source": "Cryptography_CSE3703.pdf",
+      "subject_name": "Cryptography",
+      "section_title": "Evaluation Summary",
+      "text": "Course: Cryptography\nCourse Code: CSE3703\nCredits: 3 (3-0-0)\nSection: Evaluation Summary\nSection Type: evaluation\n\nThe final grade will be based on the marks / grades obtained in the mid-semester and end-semester evaluation along with other assessments defined below. Relative grading method defined in the academic regulations of the university will be followed to grade the students. Student has to secure minimum 40% of marks after completing all the assessments in the following table to become eligible for grading. Evaluation Component Weightage (%) Evaluation Schedule/Timeline Rubrics/Remarks CO mapping Assignment 20% March 1st week Conceptual clarity, correctness of cryptographic methods, quality of explanation, originality, and timely submission will be evaluated. CO1, CO2 Mid Semester Examination 20% As per academic calendar Evaluation will focus on conceptual understanding, analytical ability, and problem-solving skills based on covered syllabus. CO1, CO2, CO3 Quiz 20% April 1st week MCQ-based assessment to test understanding of key concepts, algorithms, and terminologies discussed in class. CO2, CO3 End Term Evaluation 40% As per academic calendar/Date sheet Comprehensive assessment of theoretical knowledge, analytical depth, and ability to evaluate cryptographic techniques across the entire syllabus. CO1, CO2, CO3, CO4"
+    }
+  ]
+}
