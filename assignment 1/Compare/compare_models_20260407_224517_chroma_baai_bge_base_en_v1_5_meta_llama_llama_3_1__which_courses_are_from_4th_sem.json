@@ -1,0 +1,82 @@
+{
+  "question": "which courses are from 4th sem.",
+  "generator_backend": "huggingface",
+  "retrieved_context": [
+    {
+      "score": 0.5582,
+      "subject_name": "Generative AI and LLMs",
+      "section_title": "CO/PO",
+      "source": "Generative AI and LLMs_CourseHandout.pdf"
+    },
+    {
+      "score": 0.5574,
+      "subject_name": "Network Security",
+      "section_title": "Document Overview",
+      "source": "Network Security (1).pdf"
+    },
+    {
+      "score": 0.5539,
+      "subject_name": "Theory of Computation",
+      "section_title": "Document Overview",
+      "source": "Course Handout - ToC (Jan-June).pdf"
+    },
+    {
+      "score": 0.5529,
+      "subject_name": "Discrete Mathematics",
+      "section_title": "Document Overview",
+      "source": "Batch 2023_Course Handout_Discrete Mathematics-Odd-2025-26.pdf"
+    },
+    {
+      "score": 0.5528,
+      "subject_name": "IoT Networks, Architectures and Applications",
+      "section_title": "CO/PO",
+      "source": " IoT Networks, Architectures and Applications-CSE 2023 Batch.pdf"
+    },
+    {
+      "score": 0.5526,
+      "subject_name": "Cryptography",
+      "section_title": "CO/PO Mapping",
+      "source": "Cryptography_CSE3703.pdf"
+    },
+    {
+      "score": 0.5518,
+      "subject_name": "Making Causal Inferences to Support Decisions",
+      "section_title": "Structured Course Facts",
+      "source": "Course Handout Making Causal Inferences CSE3025 AY 2025-26 6th Sem.pdf"
+    },
+    {
+      "score": 0.5518,
+      "subject_name": "Generative AI and LLMs",
+      "section_title": "edition",
+      "source": "Generative AI and LLMs_CourseHandout.pdf"
+    }
+  ],
+  "model_outputs": [
+    {
+      "model": "meta-llama/Llama-3.1-8B-Instruct",
+      "answer": "There are no courses mentioned in the retrieved context that are specifically from the 4th semester. The retrieved contexts mention courses from the 5th semester (CSE3720, CSE3714, CSE2721, CSE 3715, CSE3722) and the 6th semester (CSE3025), but not from the 4th semester. The relevant sources are Generative AI and LLMs_CourseHandout.pdf, Network Security (1).pdf, Course Handout - ToC (Jan-June).pdf, Batch 2023_Course Handout_Discrete Mathematics-Odd-2025-26.pdf, IoT Networks, Architectures and Applications-CSE 2023 Batch.pdf, and Course Handout Making Causal Inferences CSE3025 AY 2025-26 6th Sem.pdf.",
+      "sources": [
+        " IoT Networks, Architectures and Applications-CSE 2023 Batch.pdf",
+        "Batch 2023_Course Handout_Discrete Mathematics-Odd-2025-26.pdf",
+        "Course Handout - ToC (Jan-June).pdf",
+        "Course Handout Making Causal Inferences CSE3025 AY 2025-26 6th Sem.pdf",
+        "Cryptography_CSE3703.pdf",
+        "Generative AI and LLMs_CourseHandout.pdf",
+        "Network Security (1).pdf"
+      ]
+    },
+    {
+      "model": "openai/gpt-oss-120b",
+      "answer": "None of the uploaded handouts indicate a course that belongs to the 4th semester. The contexts that do mention semester information list Network Security (Network Security (1).pdf), Theory of Computation (Course Handout - ToC (Jan-June).pdf), Discrete Mathematics (Batch 2023_Course Handout_Discrete Mathematics-Odd-2025-26.pdf) and Making Causal Inferences (Course Handout Making Causal Inferences CSE3025 AY 2025-26 6th Sem.pdf) as 5th or 6th semester courses, while the other handouts do not specify a semester at all.",
+      "sources": [
+        " IoT Networks, Architectures and Applications-CSE 2023 Batch.pdf",
+        "Batch 2023_Course Handout_Discrete Mathematics-Odd-2025-26.pdf",
+        "Course Handout - ToC (Jan-June).pdf",
+        "Course Handout Making Causal Inferences CSE3025 AY 2025-26 6th Sem.pdf",
+        "Cryptography_CSE3703.pdf",
+        "Generative AI and LLMs_CourseHandout.pdf",
+        "Network Security (1).pdf"
+      ]
+    }
+  ]
+}

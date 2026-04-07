@@ -1,0 +1,78 @@
+{
+  "question": "Compare the credits, evaluation pattern, and major topics of coureses ne 5th sem.",
+  "generator_backend": "huggingface",
+  "retrieved_context": [
+    {
+      "score": 0.8712,
+      "subject_name": "Making Causal Inferences to Support Decisions",
+      "section_title": "Evaluation Summary",
+      "source": "Course Handout Making Causal Inferences CSE3025 AY 2025-26 6th Sem.pdf"
+    },
+    {
+      "score": 0.863,
+      "subject_name": "Theory of Computation",
+      "section_title": "Evaluation Summary",
+      "source": "Course Handout - ToC (Jan-June).pdf"
+    },
+    {
+      "score": 0.8611,
+      "subject_name": "IoT Networks, Architectures and Applications",
+      "section_title": "Evaluation Summary",
+      "source": " IoT Networks, Architectures and Applications-CSE 2023 Batch.pdf"
+    },
+    {
+      "score": 0.8574,
+      "subject_name": "Discrete Mathematics",
+      "section_title": "Assessment Pattern",
+      "source": "Batch 2023_Course Handout_Discrete Mathematics-Odd-2025-26.pdf"
+    },
+    {
+      "score": 0.8544,
+      "subject_name": "Network Security",
+      "section_title": "Evaluation Summary",
+      "source": "Network Security (1).pdf"
+    },
+    {
+      "score": 0.8542,
+      "subject_name": "Discrete Mathematics",
+      "section_title": "Evaluation Summary",
+      "source": "Batch 2023_Course Handout_Discrete Mathematics-Odd-2025-26.pdf"
+    },
+    {
+      "score": 0.8535,
+      "subject_name": "Theory of Computation",
+      "section_title": "Credits",
+      "source": "Course Handout - ToC (Jan-June).pdf"
+    },
+    {
+      "score": 0.8467,
+      "subject_name": "Making Causal Inferences to Support Decisions",
+      "section_title": "Credits",
+      "source": "Course Handout Making Causal Inferences CSE3025 AY 2025-26 6th Sem.pdf"
+    }
+  ],
+  "model_outputs": [
+    {
+      "model": "meta-llama/Llama-3.1-8B-Instruct",
+      "answer": "The courses in the 5th semester have varying credits, evaluation patterns, and major topics. The course \"Making Causal Inferences to Support Decisions\" (CSE3025) has 3 credits (2L-0T-2P), with a final grade based on the marks obtained in the quiz, assignments, project, and other assessments, and the major topics include making causal inferences to support decisions. This information is supported by the course handout \"Making Causal Inferences CSE3025 AY 2025-26 6th Sem.pdf\" and \"Course Handout Making Causal Inferences CSE3025 AY 2025-26 6th Sem.pdf\". The course \"Theory of Computation\" (CSE2721) has 3 credits, with a final grade based on the marks obtained in the Mid-semester exam and other assessments, and the major topics include theory of computation. This information is supported by the course handout \"Course Handout - ToC (Jan-June).pdf\" and \"Course Handout - ToC (Jan-June).pdf\". The course \"IoT Networks, Architectures and Applications\" (CSE3722) has 3 credits (L-D-P: 3-0-0), with a final grade based on the marks obtained in the mid-term and end-term evaluations, and the major topics include IoT networks, architectures, and applications. This information is supported by the course handout \"IoT Networks, Architectures and Applications-CSE 2023 Batch.pdf\". The course \"Discrete Mathematics\" (CSE 3715) has 2 credits, with a final grade based on the marks obtained in various assessment components, and the major topics include discrete mathematics. This information is supported by the course handout \"Batch 2023_Course Handout_Discrete Mathematics-Odd-2025-26.pdf\" and \"Batch 2023_Course Handout_Discrete Mathematics-Odd-2025-26.pdf\". The course \"Network Security\" (CSE3714) has 3 credits (3-0-0), with a final grade based on the marks obtained in the internal assessment evaluations and the end-term assessment, and the major topics include network security. This information is supported by the course handout \"Network Security (1).pdf\".",
+      "sources": [
+        " IoT Networks, Architectures and Applications-CSE 2023 Batch.pdf",
+        "Batch 2023_Course Handout_Discrete Mathematics-Odd-2025-26.pdf",
+        "Course Handout - ToC (Jan-June).pdf",
+        "Course Handout Making Causal Inferences CSE3025 AY 2025-26 6th Sem.pdf",
+        "Network Security (1).pdf"
+      ]
+    },
+    {
+      "model": "openai/gpt-oss-120b",
+      "answer": "The handouts do not provide information about the credits, evaluation patterns, or major topics for courses specifically designated as being in the 5th semester. The available contexts describe credits and evaluation details for courses such as Making Causal Inferences to Support Decisions (CSE3025), Theory of Computation (CSE2721), IoT Networks, Architectures and Applications (CSE3722), Discrete Mathematics (CSE3715), and Network Security (CSE3714), but none of these specify a 5th\u2011semester placement or list major topics. Consequently, the requested comparison for 5th\u2011semester courses cannot be made from the uploaded handouts.",
+      "sources": [
+        " IoT Networks, Architectures and Applications-CSE 2023 Batch.pdf",
+        "Batch 2023_Course Handout_Discrete Mathematics-Odd-2025-26.pdf",
+        "Course Handout - ToC (Jan-June).pdf",
+        "Course Handout Making Causal Inferences CSE3025 AY 2025-26 6th Sem.pdf",
+        "Network Security (1).pdf"
+      ]
+    }
+  ]
+}
