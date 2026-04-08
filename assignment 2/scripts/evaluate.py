@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import math
 import re
 from pathlib import Path
 
@@ -52,6 +53,53 @@ def token_f1(prediction: str, reference: str) -> float:
 
 def exact_match(prediction: str, reference: str) -> float:
     return float(normalize_text(prediction) == normalize_text(reference))
+
+
+def bleu1(prediction: str, reference: str) -> float:
+    pred_tokens = normalize_text(prediction).split()
+    ref_tokens = normalize_text(reference).split()
+    if not pred_tokens or not ref_tokens:
+        return 0.0
+
+    ref_counts: dict[str, int] = {}
+    used_counts: dict[str, int] = {}
+    for token in ref_tokens:
+        ref_counts[token] = ref_counts.get(token, 0) + 1
+
+    overlap = 0
+    for token in pred_tokens:
+        used_counts[token] = used_counts.get(token, 0) + 1
+        if used_counts[token] <= ref_counts.get(token, 0):
+            overlap += 1
+
+    precision = overlap / len(pred_tokens)
+    brevity_penalty = 1.0 if len(pred_tokens) > len(ref_tokens) else math.exp(1 - len(ref_tokens) / max(len(pred_tokens), 1))
+    return brevity_penalty * precision
+
+
+def lcs_length(left: list[str], right: list[str]) -> int:
+    dp = [[0] * (len(right) + 1) for _ in range(len(left) + 1)]
+    for i in range(len(left) - 1, -1, -1):
+        for j in range(len(right) - 1, -1, -1):
+            if left[i] == right[j]:
+                dp[i][j] = 1 + dp[i + 1][j + 1]
+            else:
+                dp[i][j] = max(dp[i + 1][j], dp[i][j + 1])
+    return dp[0][0]
+
+
+def rouge_l_f1(prediction: str, reference: str) -> float:
+    pred_tokens = normalize_text(prediction).split()
+    ref_tokens = normalize_text(reference).split()
+    if not pred_tokens or not ref_tokens:
+        return 0.0
+
+    lcs = lcs_length(pred_tokens, ref_tokens)
+    precision = lcs / len(pred_tokens)
+    recall = lcs / len(ref_tokens)
+    if precision + recall == 0:
+        return 0.0
+    return 2 * precision * recall / (precision + recall)
 
 
 def build_prompt(user_prompt: str, system_prompt: str) -> str:
@@ -125,6 +173,8 @@ def main() -> None:
     predictions = []
     exact_scores = []
     f1_scores = []
+    bleu1_scores = []
+    rouge_l_scores = []
 
     for row in tqdm(rows, desc="Evaluating"):
         prompt = build_prompt(row["prompt"], args.system_prompt)
@@ -138,8 +188,12 @@ def main() -> None:
         )
         em = exact_match(prediction, row["response"])
         f1 = token_f1(prediction, row["response"])
+        bleu = bleu1(prediction, row["response"])
+        rouge = rouge_l_f1(prediction, row["response"])
         exact_scores.append(em)
         f1_scores.append(f1)
+        bleu1_scores.append(bleu)
+        rouge_l_scores.append(rouge)
         predictions.append(
             {
                 "id": row["id"],
@@ -149,6 +203,8 @@ def main() -> None:
                 "prediction": prediction,
                 "exact_match": em,
                 "token_f1": f1,
+                "bleu1": bleu,
+                "rouge_l_f1": rouge,
             }
         )
 
@@ -158,6 +214,8 @@ def main() -> None:
         "examples_evaluated": len(predictions),
         "exact_match": sum(exact_scores) / len(exact_scores) if exact_scores else 0.0,
         "token_f1": sum(f1_scores) / len(f1_scores) if f1_scores else 0.0,
+        "bleu1": sum(bleu1_scores) / len(bleu1_scores) if bleu1_scores else 0.0,
+        "rouge_l_f1": sum(rouge_l_scores) / len(rouge_l_scores) if rouge_l_scores else 0.0,
         "predictions": predictions,
     }
 
@@ -169,4 +227,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-
