@@ -48,7 +48,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--train-file", default="data/ecommerce_support/train.jsonl")
     parser.add_argument("--validation-file", default="data/ecommerce_support/validation.jsonl")
     parser.add_argument("--output-dir", default="artifacts/tinyllama-ecommerce-lora")
-    parser.add_argument("--max-length", type=int, default=512)
+    parser.add_argument("--max-length", type=int, default=374)
     parser.add_argument("--learning-rate", type=float, default=2e-4)
     parser.add_argument("--num-train-epochs", type=int, default=3)
     parser.add_argument("--per-device-train-batch-size", type=int, default=4)
