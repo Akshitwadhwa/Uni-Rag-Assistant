@@ -143,14 +143,6 @@ Then follow the detailed instructions in [assignment 2/README.md](/Users/Lenovo/
 - Assignment 1 relies on Hugging Face hosted inference for answer generation
 - Assignment 2 fine-tuning is better suited to GPU or Colab for efficient training
 
-## Suggested Reading Order
-
-If someone is reviewing the project for the first time:
-
-1. Read this root `README.md`
-2. Open [assignment 1/report.md](/Users/Lenovo/Desktop/sem 6/Gen_AI group assignment/assignment 1/report.md)
-3. Open [assignment 1/README.md](/Users/Lenovo/Desktop/sem 6/Gen_AI group assignment/assignment 1/README.md)
-4. Open [assignment 2/README.md](/Users/Lenovo/Desktop/sem 6/Gen_AI group assignment/assignment 2/README.md)
 
 ## Summary
 
